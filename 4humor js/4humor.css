@@ -1,0 +1,68 @@
+.board {
+    width: 50%;
+    max-height: 500px;
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-weight: bolder;
+}
+
+
+
+.loading-part{
+    color:rgb(194, 229, 188);
+    background-color: rgb(39, 3, 3);
+    text-align: center;
+    padding-top: 240px;
+    height: 260px;
+    
+}
+
+
+
+td, tr, td {
+    width: 100px;
+    height: 150px;
+    padding: 10px;
+    text-align: center;
+    margin: 0px;
+    border-radius: 10px;
+}
+
+.hearts {
+    color:rgb(249, 143, 143);
+    background-color: rgb(14, 22, 109);
+}
+
+.spades {
+    color:rgb(194, 229, 188);
+}
+
+.clubs {
+    color:rgb(143, 195, 226);
+}
+
+.diamonds {
+    color:rgb(222, 214, 150);
+}
+
+
+.opponent {
+    background-color: rgb(39, 3, 3);
+    color:rgb(229, 206, 199)
+}
+
+.frend {
+    background-color: rgb(2, 5, 38);
+    color:rgb(255, 255, 255)
+}
+
+.border {
+    background-color: black;
+    height: 10px;
+
+}
+
+#result {
+    color: white;
+}

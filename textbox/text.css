@@ -1,0 +1,197 @@
+
+
+
+
+
+.textbox {
+    bottom: 0px;
+    position: absolute;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top:0px;
+    padding-bottom: 0px;
+    min-height: 150px;
+    max-height: 50vh;
+
+    width: calc(100% - 20vw - 10px);
+    border-radius: 20px;
+
+    background: linear-gradient(0deg, rgb(13, 16, 41) 1%, rgba(9, 15, 43, 0.894)66%);
+    
+
+    color: white;
+    border-color: white;
+    border-width: 5px;
+    border-style: solid;
+    
+    overflow: hidden;
+    
+    box-shadow: inset 0em 0em 60px rgba(7, 11, 43, 0.87);
+}
+
+.active {
+    animation: show 0.2s ease-out;
+
+}
+
+.hidden {
+    animation: hide 0.2s ease-out;
+
+}
+
+#active-text {
+    scroll-behavior:auto;
+    max-height: calc(50vh - 200px);
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    font-size: larger;
+    display: flex;
+    align-items: left;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+  
+}
+
+.textbox-label {
+    text-align: center;
+    left: 5vw;
+    padding: 20px;
+    padding-bottom: 5px;
+    font-size: x-large;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+
+.jitter {
+    animation: jitter 0.2s linear infinite;
+}
+
+
+.jitter2 {
+    animation: jitter2 0.2s linear infinite;
+}
+
+@keyframes show {
+    0% { transform: scale(100%, 0%);}
+    100% { transform: scale(0px, 0px);}
+    
+  }
+
+@keyframes hide {
+    0% { transform: scale(0px, 0px);}
+    100% { transform: scale(100%, 0%);}
+    
+}
+
+@keyframes slide-in {
+    0% { transform: translate(-100%, 0%);}
+    100% { transform: translate(0%, 0%);}
+    
+}
+
+@keyframes slide-out {
+    0% { transform: translate(0%, 0%);}
+    100% { transform: translate(-100%, 0%);}
+    
+}
+
+@keyframes jitter {
+    0% { transform: translate(0px, 0px);}
+    20% { transform: translate(1px, 2px);}
+    40% { transform: translate(-1px, -2px);}
+    70% { transform: translate(-3px, 5px);}
+    100% { transform: translate(0px, 0px);}
+    
+  }
+
+
+@keyframes jitter2 {
+    0% { transform: translate(0px, 0px);}
+    20% { transform: translate(2px, 4px);}
+    40% { transform: translate(-2px, -4px);}
+    70% { transform: translate(-6px, 10px);}
+    100% { transform: translate(0px, 0px);}
+    
+}
+
+
+@keyframes blink-fade {
+    0% { opacity: 0%;}
+    25% { opacity: 75%;}
+    50% { opacity: 100%;}
+    75% { opacity: 75%;}
+    100% { opacity: 0%;}
+    
+}
+
+
+.text-box-button {
+    background-color:rgba(233, 237, 242, 0);
+    color: rgba(255, 255, 255, 0.787);
+    bottom: 1vw;
+    padding: 0.5em;
+    margin: 0.5em;
+    font-size: larger;
+    border-style: none;
+    cursor: pointer;
+    text-justify: left;
+    text-align: left;
+
+}
+
+
+.text-box-button:hover{
+    color:rgba(255, 255, 255, 0.931);
+    text-emphasis: bold;
+    font-weight: bolder;
+
+}
+
+.text-box-button:before {
+    content:"> ";
+}
+
+
+.next {
+    position: fixed;
+    color: white;
+    right: 50px;
+    bottom: 30px;
+    animation: blink-fade 2s infinite linear;
+}
+
+
+.invisible {
+    opacity: 0%;
+    position: fixed;
+    right: 50px;
+    bottom: 30px;
+}
+
+.inner-text {
+    display: inline;
+}
+
+.Roxie {
+    opacity: 20% !important;
+}
+
+#speaking-sprite {
+    place-self: 0px 0px;
+    position: absolute;
+    min-height: 100%;
+}
+
+.entering-sprite {
+    animation: slide-out 1s ease-in;
+
+}
+
+.leaving-sprite {
+    transition:slide-out 0.5s ease-in
+}
+
+
