@@ -3,11 +3,12 @@
 
 
 function check_if_hit(board, posn) {
+    // Checks if an attack made at the listed position would successfully make a direct attack.
+
     var def = get_defender(board, posn); // defender
     var sup = get_defender_support(board, posn); // defender support
     
-    if (get_card(def) != "") return false;
-    if (get_card(sup) == "2♣️") return false;
+    if (get_card(def) != "" || get_card(sup) == "2♣️") return false;
 
 
     return true;
@@ -16,6 +17,8 @@ function check_if_hit(board, posn) {
 
 
 function get_posn_damage(board, posn){
+    // Gets all Direct Damage dealt by a specific position
+
     var atk = get_attacker(board, posn); // attacker
     if (atk === "") return 0;
 
@@ -34,6 +37,8 @@ function get_posn_damage(board, posn){
 
 
 function parse_attacker_bonus(board, posn) {
+    // Gets any bonus direct damage caused by the specific card in the attacking position.
+
     var def = get_defender(board, posn); // defender
     var atk = get_attacker(board, posn); // attacker
 
@@ -97,6 +102,9 @@ function parse_attacker_bonus(board, posn) {
 
 
 function parse_support_damage(board, posn) {
+    // Gets any bonus direct damage caused by the specific card supporting the attackerr
+    // in the position given.
+    
     var def = get_defender(board, posn); // defender
     var atk = get_attacker(board, posn); // attacker
     var sup = get_support(board, posn); // attacker
@@ -182,7 +190,9 @@ function parse_support_damage(board, posn) {
 
 
 function get_total_damage(board) {
-
+    // Gets any bonus direct damage caused by the specific card supporting the attackerr
+    // in the position given.
+    
     var damage = get_posn_damage(board, 0);
     damage += get_posn_damage(board, 1);
     damage += get_posn_damage(board, 2);
