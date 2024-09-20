@@ -210,12 +210,10 @@ function update_puzzle_num() {
 function clear_display_generation() {
     update_puzzle_num();
     current_board = document.getElementById("board");
-    result = document.getElementById("result");
 
     html = "<div class=' board loading-part'>Generating Puzzle...</div>";
     current_board.innerHTML = html;
 
-    result.innerHTML = 0;
 
 }
 
@@ -225,7 +223,6 @@ function clear_display_generation() {
 function display_generation() {
     update_puzzle_num();
     current_board = document.getElementById("board");
-    result = document.getElementById("result");
 
     html = "<table class='board'>";
 
@@ -236,7 +233,6 @@ function display_generation() {
     html += "</table>"
     current_board.innerHTML = html;
 
-    result.innerHTML = get_total_damage(current_boards[index]);
 
 }
 
