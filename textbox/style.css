@@ -2,7 +2,6 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Courier New', Courier, monospace;
-    overflow: hidden;
 }
 
 
@@ -11,6 +10,7 @@ body {
     height: 0px;
     animation: fade-out 3s;
     transition: unfocussed 2s linear;
+    position: fixed;
 }
 
 .focussing {
@@ -22,6 +22,7 @@ body {
     backdrop-filter: blur(2px);
     opacity: 0;
     transition: opacity 0.5s linear;
+    position: fixed;
 
 }
 
@@ -33,6 +34,7 @@ body {
     mix-blend-mode:darken;
     backdrop-filter: blur(2px);
     transition: opacity 2s linear;
+    position: fixed;
 }
 
 button {

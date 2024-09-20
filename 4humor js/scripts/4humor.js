@@ -62,7 +62,7 @@ function parse_attacker_bonus(board, posn) {
 
             break;
 
-        // CLUBS (PHLEGMATIC)
+        // CLUBS (PHLEGMATIC) what if i just uhh didn't put these in the attack options how about that
 
         case ("A♣️"):
             if (check_if_hit(board, posn)) {
