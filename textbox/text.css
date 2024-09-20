@@ -1,10 +1,17 @@
 
 
-
-
+/*
+Styling for the background, size and overall look of the text box.
+*/
 
 .textbox {
-    bottom: 0px;
+
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Courier New', Courier, monospace;
+
+
+    bottom: 5px;
     position: absolute;
     padding-left: 10vw;
     padding-right: 10vw;
@@ -30,16 +37,24 @@
     position: fixed;
 }
 
-.active {
-    animation: show 0.2s ease-out;
 
+/*
+Name of speaeker styling
+*/
+.textbox-label {
+    text-align: center;
+    left: 5vw;
+    padding: 20px;
+    padding-bottom: 5px;
+    font-size: x-large;
+    margin-bottom: 1em;
+    font-weight: bold;
 }
 
-.hidden {
-    animation: hide 0.2s ease-out;
 
-}
-
+/*
+Styling for the section of text box under the name that holds the text itself
+*/
 #active-text {
     scroll-behavior:auto;
     max-height: calc(50vh - 200px);
@@ -55,17 +70,25 @@
   
 }
 
-.textbox-label {
-    text-align: center;
-    left: 5vw;
-    padding: 20px;
-    padding-bottom: 5px;
-    font-size: x-large;
-    margin-bottom: 1em;
-    font-weight: bold;
+/*
+Animation for the text box appearing or disappearing when activated.
+*/
+.active {
+    animation: show 0.2s ease-out;
+
+}
+
+.hidden {
+    animation: hide 0.2s ease-out;
+
 }
 
 
+
+/*
+Examples of classes that could be embedded into text boxes
+for animated text styling.
+*/
 .jitter {
     animation: jitter 0.2s linear infinite;
 }
@@ -74,6 +97,149 @@
 .jitter2 {
     animation: jitter2 0.2s linear infinite;
 }
+
+
+
+
+/*
+Styling for text choices when they're presented to the user
+*/
+
+
+.text-box-button {
+    background-color:rgba(233, 237, 242, 0);
+    color: rgba(255, 255, 255, 0.787);
+    bottom: 1vw;
+    padding: 0.5em;
+    margin: 0.5em;
+    font-size: larger;
+    border-style: none;
+    cursor: pointer;
+    text-justify: left;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+
+.text-box-button:hover{
+    color:rgba(255, 255, 255, 0.931);
+    text-emphasis: bold;
+    font-weight: bolder;
+
+}
+
+.text-box-button:before {
+    content:"> ";
+}
+
+
+
+/*
+Styling for havin the text letters appear one by one.
+*/
+
+.next {
+    position: fixed;
+    color: white;
+    right: 50px;
+    bottom: 30px;
+    animation: blink-fade 2s infinite linear;
+}
+
+
+/*Hides text/ the next icon before it's time for it to show*/
+.invisible {
+    opacity: 0%;
+    position: fixed;
+    right: 50px;
+    bottom: 30px;
+}
+
+
+.inner-text {
+    display: inline;
+}
+
+
+
+/*
+This styling is a wip for sprites while talking and
+animating entrances and exits.
+*/
+
+#speaking-sprite {
+    place-self: 0px 0px;
+    position: absolute;
+    min-height: 100%;
+}
+
+.entering-sprite {
+    animation: slide-out 1s ease-in;
+
+}
+
+.leaving-sprite {
+    transition:slide-out 0.5s ease-in
+}
+
+
+
+/*
+Styling is for the blurring div behind the text box 
+when active and the animation for it coming in and out of focus. 
+*/
+
+.focussed {
+    width:0px;
+    height: 0px;
+    animation: fade-out 3s;
+    transition: unfocussed 2s linear;
+    position: fixed;
+}
+
+.focussing {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(235, 235, 235);
+    mix-blend-mode:darken;
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    transition: opacity 0.5s linear;
+    position: fixed;
+
+}
+
+.unfocussed {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(235, 235, 235);
+    mix-blend-mode:darken;
+    backdrop-filter: blur(2px);
+    transition: opacity 2s linear;
+    position: fixed;
+}
+
+
+
+/*
+ANIMATIONS
+*/
+
+@keyframes fade-in {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+    
+  }
+
+@keyframes fade-out {
+    0% { opacity: 1;}
+    100% { opacity: 0;}
+    
+}
+
 
 @keyframes show {
     0% { transform: scale(100%, 0%);}
@@ -126,73 +292,6 @@
     75% { opacity: 75%;}
     100% { opacity: 0%;}
     
-}
-
-
-.text-box-button {
-    background-color:rgba(233, 237, 242, 0);
-    color: rgba(255, 255, 255, 0.787);
-    bottom: 1vw;
-    padding: 0.5em;
-    margin: 0.5em;
-    font-size: larger;
-    border-style: none;
-    cursor: pointer;
-    text-justify: left;
-    text-align: left;
-
-}
-
-
-.text-box-button:hover{
-    color:rgba(255, 255, 255, 0.931);
-    text-emphasis: bold;
-    font-weight: bolder;
-
-}
-
-.text-box-button:before {
-    content:"> ";
-}
-
-
-.next {
-    position: fixed;
-    color: white;
-    right: 50px;
-    bottom: 30px;
-    animation: blink-fade 2s infinite linear;
-}
-
-
-.invisible {
-    opacity: 0%;
-    position: fixed;
-    right: 50px;
-    bottom: 30px;
-}
-
-.inner-text {
-    display: inline;
-}
-
-.Roxie {
-    opacity: 20% !important;
-}
-
-#speaking-sprite {
-    place-self: 0px 0px;
-    position: absolute;
-    min-height: 100%;
-}
-
-.entering-sprite {
-    animation: slide-out 1s ease-in;
-
-}
-
-.leaving-sprite {
-    transition:slide-out 0.5s ease-in
 }
 
 
