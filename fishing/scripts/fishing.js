@@ -1,22 +1,26 @@
 // ALL of these are in PERCENT
 var target_position = 0;
-var target_jitter = 0;
 
 var aim_position = 0;
-const aim_width = .5;
-var aim_max_vel = 3;
 var aim_start_vel = .5;
 var aim_velocity = .5;
 
-var slower_vel = 0.5;
-
+const aim_width = .5;
+const aim_max_vel = 3;
+const slower_vel = 0.5;
 const min_acceleration = .05;
 const max_acceleration = 1;
+const acc_jitter = 1;
 
 
 const acceleration_center_posn = 50;
 const interval_rate = 10;
+const fail_time_penalty = 1000;
+
+
+// Interval containers
 var interval;
+var slow_interval;
 
 
 const levels = [
@@ -58,22 +62,40 @@ const levels = [
 ]
 
 
+
+function set_button_to_drop() {
+    drop_button = document.getElementById("drop-button");
+    drop_button.innerHTML = "STEADY"
+
+}
+
+function set_button_to_slow() {
+    drop_button = document.getElementById("drop-button");
+    drop_button.innerHTML = "MAGNETIZE"
+}
+
+function set_button_to_busy() {
+    drop_button = document.getElementById("drop-button");
+    drop_button.innerHTML = "BUSY..."
+}
+
+
 function run() {
     place_target()
     interval = setInterval(update, interval_rate)
-    setInterval(jitter_target, 300)
-}
+    setInterval(jitter_target, 300) // constant
 
-document.body.onkeyup = function(k) {
-    if (interval != null && (k.key == " " || k.code == "Space" || k.keyCode == 32)) {
-        drop();
-    }
-  }
-  document.body.onkeydown = function(k) {
-      if (interval != null && (k.key == " " || k.code == "Space" || k.keyCode == 32)) {
-          slow();
+    document.body.onkeyup = function(k) {
+        if (interval != null && (k.key == " " || k.code == "Space")) {
+            drop();
+        }
       }
+    document.body.onkeydown = function(k) {
+        if (interval != null && (k.key == " " || k.code == "Space")) {
+            slow();
+        }
     }
+}
   
 
 function update() {
@@ -95,6 +117,8 @@ function jitter_target() {
 
 
 function drop() {
+    set_button_to_busy()
+    clearInterval(interval);
 
     var echo = document.createElement("div");
     echo.setAttribute("class", "echo");
@@ -103,20 +127,35 @@ function drop() {
         aim_position + aim_width < target_position + levels[current_speaker].size)||
         (target_position < aim_position && 
         aim_position < target_position + levels[current_speaker].size)) {
-
-        clearInterval(interval);
-        interval = null;
-        dog_speak();
-        return;
+        setTimeout(successful_drop, fail_time_penalty);
+    } else {
+        setTimeout(failed_drop, fail_time_penalty);
     }
+    clearInterval(slow_interval);
+}
+
+function failed_drop() {
+    aim_velocity = Math.sign(aim_velocity) * aim_start_vel;
+    interval = setInterval(update, interval_rate);
+    set_button_to_drop();
+}
+
+function successful_drop() {
+    interval = null;
+    dog_speak();
 }
 
 function slow() {
-    var direction = Math.sign(aim_velocity);
-    
-    aim_velocity = direction * slower_vel
+    clearInterval(slow_interval);
+    set_button_to_slow();
+    slow_interval = setInterval(set_speed_slow, interval_rate);
 }
 
+function set_speed_slow() {
+    var direction = Math.sign(aim_velocity);
+    aim_velocity = direction * slower_vel;
+
+}
 
 function move_target() {
     document.getElementById("target").style = "width: " + levels[current_speaker].size + 

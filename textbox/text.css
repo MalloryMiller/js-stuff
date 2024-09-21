@@ -39,6 +39,11 @@ Styling for the background, size and overall look of the text box.
 }
 
 
+.Terminal {
+    background-color: brown;
+}
+
+
 /*
 Name of speaeker styling
 */
@@ -298,4 +303,17 @@ ANIMATIONS
     
 }
 
+.interactable :hover {
+    animation: highlight-loop 2s ease-in-out infinite !important;
+}
 
+
+@keyframes highlight-loop {
+    0% { 
+        filter: brightness(0) contrast(0);}
+    50% { 
+        filter: brightness(1) contrast(.2);}
+    100% { 
+        filter: brightness(0) contrast(0);}
+    
+  }

@@ -1,7 +1,7 @@
 
 // CONSTS
 
-const special_speakers = ["Jesse"];
+const special_speakers = ["Terminal"];
 const TEXT_SPEED = 30;
 const SPECIAL_TEXT_SPEEDS = {
     ',': 3,
@@ -53,6 +53,7 @@ function newText(to_say) {
     name.id = "speaker"
     name.setAttribute("class", "textbox-label");
     textbox.appendChild(name);
+    
 
 
     var text_holder = document.createElement("p");
