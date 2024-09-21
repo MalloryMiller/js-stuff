@@ -6,6 +6,7 @@
     background-color: green;
     position: absolute;
     z-index: inherit;
+    transition: all .5s;
 
 }
 
@@ -15,6 +16,7 @@
     border-radius: 25px;
     overflow: hidden;
     position:static;
+    
 }
 
 #aim {
@@ -22,4 +24,24 @@
     height: 50px;
     background-color: gold;
     position: absolute;
+}
+
+.aim-echo {
+    transition: echo 3s ease ;
+    width: 1%;
+    height: 50px;
+    background-color: gold;
+    position: absolute;
+}
+
+
+
+@keyframes echo {
+    0% { 
+        transform: scale(30);
+        opacity: 1;
+    }
+    100% { transform: scale(30);
+        opacity: 0;}
+    
 }

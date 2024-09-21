@@ -43,6 +43,7 @@ function third_speak() {
         {"speaker": "T3RI3R", "text": "A splendiferous occasion! A phenomenal and courageous venture!"} , 
         {"speaker": "T3RI3R", "text": "Of course for your incredible endeavors I must bequeath you a reward:"} , 
         {"speaker": "T3RI3R", "text": "<span style='color: red'>The last letter is the first plus seventeen!</span>"} , 
+        [{choice: "Let's continue.", onclick: "level_up()"}],
     ])
 }
 
@@ -54,9 +55,10 @@ function fourth_speak() {
         {"speaker": "M4L4MUt3", "text": "Oh. Uhh. Haha."} , 
         {"speaker": "M4L4MUt3", "text": "Funny story I, uhm, usually just ask the onboard ship assistant to do that kind of thing."} , 
         {"speaker": "M4L4MUt3", "text": "But for some reason it was offline, so."} , 
-        {"speaker": "M4L4MUt3", "text": "I just typed some stuff thoughtfully while everyone else did their thing."} , 
-        {"speaker": "M4L4MUt3", "text": "Plus I, like, forgot which of the <span style='color: red'>five</span> I was supposed to do... Hahaha..."} , 
+        {"speaker": "M4L4MUt3", "text": "I just tried to look busy while everyone else did their thing."} , 
+        {"speaker": "M4L4MUt3", "text": "Plus I, like, forgot which of the <span style='color: red'>five</span> letters I was supposed to do... Hahaha..."} , 
         {"speaker": "Cnvs", "text": "Anyway thanks for the rescue!"} , 
+        [{choice: "Back at it then...", onclick: "level_up()"}],
     ])
 }
 
@@ -64,6 +66,7 @@ function fifth_speak() {
     newText([
         {"speaker": "P0DL3", "text": "..."} , 
         {"speaker": "P0DL3", "text": "The Second Letter is <span style='color: red'>L</span>."} , 
+        [{choice: "..!", onclick: "level_up()"}],
     ])
 }
 
@@ -73,13 +76,14 @@ function sixth_speak() {
         {"speaker": "D4CH", "text": "I presume you're collecting what the crew found of the puzzle on board?"} , 
         {"speaker": "D4CH", "text": "I was very close, but my diction is rather poor. <span style='color: red'>The third letter fits in the blank: ac_te</span>."} , 
         {"speaker": "D4CH", "text": "Hopefully that helps; thank you for your service."} , 
+        [{choice: "Thanks for your help!", onclick: "level_up()"}],
     ])
 }
 
 function no_more() {
     newText([
         {"text": "You've fished... a boot?"} , 
-        [{choice: "You know what? I like boots.", onclick: "changeText(1)"},{choice: "Reset Puzzle", onclick: "reset_puzzle_speeches()"}],
+        [{choice: "You know what? I like boots.", onclick: "level_up()"},{choice: "Reset Puzzle", onclick: "reset_puzzle_speeches()"}],
     ])
 }
 
