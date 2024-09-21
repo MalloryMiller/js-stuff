@@ -3,18 +3,22 @@
 #target {
     border-radius: 25px;
     height: 50px;
-    background-color: green;
+    background-color: rgb(6, 93, 6);
     position: absolute;
     z-index: inherit;
+    box-shadow: inset 0em 0em 70px rgb(13, 255, 0);
     transition: all .5s;
 
 }
 
 #attack-bar {
-    background: grey;
+    background: rgb(5, 69, 16);
     height: 50px;
+    box-shadow: inset 0em 0em 70px rgb(0, 6, 22);
     border-radius: 25px;
     overflow: hidden;
+    border: solid;
+    border-color: rgb(18, 190, 9);
     position:static;
     
 }
@@ -22,26 +26,6 @@
 #aim {
     width: 0.5%;
     height: 50px;
-    background-color: gold;
+    background-color: rgb(255, 246, 69);
     position: absolute;
-}
-
-.aim-echo {
-    transition: echo 3s ease ;
-    width: 1%;
-    height: 50px;
-    background-color: gold;
-    position: absolute;
-}
-
-
-
-@keyframes echo {
-    0% { 
-        transform: scale(30);
-        opacity: 1;
-    }
-    100% { transform: scale(30);
-        opacity: 0;}
-    
 }

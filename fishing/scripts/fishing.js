@@ -8,6 +8,8 @@ var aim_max_vel = 3;
 var aim_start_vel = .5;
 var aim_velocity = .5;
 
+var slower_vel = 0.5;
+
 const min_acceleration = .05;
 const max_acceleration = 1;
 
@@ -25,7 +27,7 @@ const levels = [
     },
     {
         'size': 30,
-        'jitter': 1,
+        'jitter': 2,
         'jitterspeed': 0,
     },
     {
@@ -35,7 +37,7 @@ const levels = [
     },
     {
         'size': 10,
-        'jitter': 2,
+        'jitter': 15,
         'jitterspeed': 0,
     },
     {
@@ -45,12 +47,12 @@ const levels = [
     },
     {
         'size': 5,
-        'jitter': 0.5,
+        'jitter': 10,
         'jitterspeed': 0,
     },
     {
         'size': 35,
-        'jitter': 1,
+        'jitter': 10,
         'jitterspeed': 0,
     },
 ]
@@ -81,15 +83,14 @@ function update() {
 
 function place_target() {
     target_position = Math.round(Math.random() * (100 - levels[current_speaker].size));
-    console.log(target_position)
 }
 
 function jitter_target() {
     target_position = target_position + 
     ((Math.random() * levels[current_speaker].jitter) 
     - levels[current_speaker].jitter / 2) 
-    if (target_position > (100 - levels[current_speaker].size)) target_position  = 100;
-    if (target_position < 0) target_position  = 0;
+    if (target_position >= (100 - levels[current_speaker].size)) target_position  = 100 - levels[current_speaker].size;
+    if (target_position <= 0) target_position  = 0;
 }
 
 
@@ -112,12 +113,8 @@ function drop() {
 
 function slow() {
     var direction = Math.sign(aim_velocity);
-    if (Math.abs(aim_velocity) > .1) {
-        aim_velocity = direction * Math.round(aim_velocity + (get_acceleration(aim_position) * 5));
-    }
-    console.log(aim_velocity);
     
-    aim_velocity = direction * 0.1
+    aim_velocity = direction * slower_vel
 }
 
 
