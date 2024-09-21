@@ -21,6 +21,7 @@ const fail_time_penalty = 1000;
 // Interval containers
 var interval;
 var slow_interval;
+var target_move_interval;
 
 
 const levels = [
@@ -83,7 +84,7 @@ function set_button_to_busy() {
 function run() {
     place_target()
     interval = setInterval(update, interval_rate)
-    setInterval(jitter_target, 300) // constant
+    target_move_interval = setInterval(jitter_target, 300)
 
     document.body.onkeyup = function(k) {
         if (interval != null && (k.key == " " || k.code == "Space")) {
@@ -119,6 +120,7 @@ function jitter_target() {
 function drop() {
     set_button_to_busy()
     clearInterval(interval);
+    clearInterval(target_move_interval);
 
     var echo = document.createElement("div");
     echo.setAttribute("class", "echo");
@@ -132,21 +134,33 @@ function drop() {
         setTimeout(failed_drop, fail_time_penalty);
     }
     clearInterval(slow_interval);
+    slow_interval = null;
 }
+
+
+
 
 function failed_drop() {
     aim_velocity = Math.sign(aim_velocity) * aim_start_vel;
     interval = setInterval(update, interval_rate);
     set_button_to_drop();
+    target_move_interval = setInterval(jitter_target, 300);
 }
 
 function successful_drop() {
     interval = null;
     dog_speak();
+    target_move_interval = setInterval(jitter_target, 300);
+}
+
+function mouse_leave_drop() {
+    if (slow_interval == null) return;
+    drop();
 }
 
 function slow() {
     clearInterval(slow_interval);
+    slow_interval = null;
     set_button_to_slow();
     slow_interval = setInterval(set_speed_slow, interval_rate);
 }
