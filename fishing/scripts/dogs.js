@@ -1,5 +1,9 @@
 
 
+function level_up() {
+    changeText(1);
+    run();
+}
 
 
 function first_speak() {
@@ -13,6 +17,7 @@ function first_speak() {
 
         [{choice: "Got what?", onclick: "changeText(-2)"},{choice: "Got it.", onclick: "changeText(1)"}],
         {"speaker": "R3TRVR", "text": "Thank you! Once we've put the pieces together we should be able to prevent future issues."} , 
+        [{choice: "Alright, I'll get back to it.", onclick: "level_up()"}],
     ])
 }
 
@@ -26,6 +31,7 @@ function second_speak() {
         {"speaker": "0ZI3", "text": "Aww but where's the fun if you don't solve it yourself! Hmm..."} , 
         {"speaker": "0ZI3", "text": "Oh! Oh! Here: <span style='color: red'>The fourth letter can be found by looking at the second half of the first!</span>"} , 
         {"speaker": "0ZI3", "text": "Hope that helps, friend! Again, Again!"} , 
+        [{choice: "Again!", onclick: "level_up()"}],
     ])
 }
 
@@ -92,14 +98,4 @@ function reset_puzzle_speeches() {
     current_speaker = 0;
 }
 
-
-`
-the first letter is either 10 letters before the second one in the alphabet or it is an r.
-The fourth letter can be found by looking at the second half of the first!
-The last letter is the first plus two!
-the third letter fits in the blank: ac_te
-...
-second letter is L
-
-`
 

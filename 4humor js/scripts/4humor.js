@@ -50,7 +50,7 @@ function parse_attacker_bonus(board, posn) {
                 return get_attack(atk);
             }
             return 0;
-
+``
             break;
         case ("Q♠️"):
             if (get_cost(def) > get_cost(atk)) {

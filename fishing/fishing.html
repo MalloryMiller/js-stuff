@@ -10,12 +10,14 @@
   <title>Test</title>
 </head>
 
-<body id="body" onload="generate()">
-  <div id="focus" class="focussed">
+<body id="body" onload="run()">
+  <div id="focus" class="focussed"></div>
+
+  <div id="attack-bar">
+    <div id="target"></div>
+    <div id="aim"></div>
   </div>
-
-
-  <div id="board"></div>
+  
   <button onclick="dog_speak()">Next puzzle hint</button>
 
   <div id="speaking-sprite"><img id="current-image" /></div>
@@ -23,6 +25,7 @@
   
   <script src="../textbox/text.js"></script>
   <script src="scripts/dogs.js"></script>
+  <script src="scripts/fishing.js"></script>
 
 </body>
 
