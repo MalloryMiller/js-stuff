@@ -39,7 +39,9 @@ let not_skipped = true;
 
 
 function newText(to_say) {
+    deleteText();
     var textbox = document.getElementById("textbox");
+    
 
 
     textbox.setAttribute("onclick", "next_text()")

@@ -16,6 +16,7 @@ const acc_jitter = 1;
 const acceleration_center_posn = 50;
 const interval_rate = 10;
 const fail_time_penalty = 1000;
+const win_time_penalty = 500;
 
 
 // Interval containers
@@ -120,7 +121,9 @@ function jitter_target() {
 function drop() {
     set_button_to_busy()
     clearInterval(interval);
+    interval = null;
     clearInterval(target_move_interval);
+    target_move_interval = null;
 
     var echo = document.createElement("div");
     echo.setAttribute("class", "echo");
@@ -129,7 +132,7 @@ function drop() {
         aim_position + aim_width < target_position + levels[current_speaker].size)||
         (target_position < aim_position && 
         aim_position < target_position + levels[current_speaker].size)) {
-        setTimeout(successful_drop, fail_time_penalty);
+        setTimeout(successful_drop, win_time_penalty);
     } else {
         setTimeout(failed_drop, fail_time_penalty);
     }

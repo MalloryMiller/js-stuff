@@ -19,7 +19,7 @@
     border: solid;
     border-color: rgb(18, 190, 9);
     position:static;
-    width: 75%
+    width: 99vww;
     
 }
 
@@ -31,5 +31,8 @@
     transition: transform 1s;
 }
 
-
+.drop-button {
+    width:100px;
+    height: 100px;
+}
 
