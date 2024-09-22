@@ -88,12 +88,12 @@ function run() {
     target_move_interval = setInterval(jitter_target, 300)
 
     document.body.onkeyup = function(k) {
-        if (interval != null && (k.key == " " || k.code == "Space")) {
+        if ((k.key == " " || k.code == "Space")) {
             drop();
         }
       }
     document.body.onkeydown = function(k) {
-        if (interval != null && (k.key == " " || k.code == "Space")) {
+        if ((k.key == " " || k.code == "Space")) {
             slow();
         }
     }
@@ -105,9 +105,11 @@ function update() {
     move_aim();
 }
 
+
 function place_target() {
     target_position = Math.round(Math.random() * (100 - levels[current_speaker].size));
 }
+
 
 function jitter_target() {
     target_position = target_position + 
@@ -119,25 +121,27 @@ function jitter_target() {
 
 
 function drop() {
-    set_button_to_busy()
-    clearInterval(interval);
-    interval = null;
-    clearInterval(target_move_interval);
-    target_move_interval = null;
+    if (interval != null){
+        set_button_to_busy()
+        clearInterval(interval);
+        interval = null;
+        clearInterval(target_move_interval);
+        target_move_interval = null;
 
-    var echo = document.createElement("div");
-    echo.setAttribute("class", "echo");
+        var echo = document.createElement("div");
+        echo.setAttribute("class", "echo");
 
-    if ((target_position < aim_position + aim_width &&
-        aim_position + aim_width < target_position + levels[current_speaker].size)||
-        (target_position < aim_position && 
-        aim_position < target_position + levels[current_speaker].size)) {
-        setTimeout(successful_drop, win_time_penalty);
-    } else {
-        setTimeout(failed_drop, fail_time_penalty);
+        if ((target_position < aim_position + aim_width &&
+            aim_position + aim_width < target_position + levels[current_speaker].size)||
+            (target_position < aim_position && 
+            aim_position < target_position + levels[current_speaker].size)) {
+            setTimeout(successful_drop, win_time_penalty);
+        } else {
+            setTimeout(failed_drop, fail_time_penalty);
+        }
+        clearInterval(slow_interval);
+        slow_interval = null;
     }
-    clearInterval(slow_interval);
-    slow_interval = null;
 }
 
 
