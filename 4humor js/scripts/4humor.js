@@ -145,6 +145,9 @@ function parse_support_damage(board, posn) {
         // CLUBS (PHLEGMATIC)
 
         case ("A♣️"):
+            if (check_if_hit(board, posn)) {
+                return get_attack(atk);
+            }
 
             return 0;
 

@@ -28,6 +28,7 @@
     height: 50px;
     background-color: rgb(255, 246, 69);
     transform: translate(0px, -100%);
+    box-shadow: 0px 0px 20px rgb(13, 255, 0);
     transition: transform 1s;
 }
 

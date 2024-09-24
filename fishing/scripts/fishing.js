@@ -29,37 +29,30 @@ const levels = [
     {
         'size': 30,
         'jitter': 0,
-        'jitterspeed': 0,
     },
     {
         'size': 30,
         'jitter': 2,
-        'jitterspeed': 0,
     },
     {
         'size': 10,
         'jitter': 5,
-        'jitterspeed': 0,
     },
     {
         'size': 10,
         'jitter': 15,
-        'jitterspeed': 0,
     },
     {
         'size': 10,
         'jitter': 2,
-        'jitterspeed': 0,
     },
     {
         'size': 5,
         'jitter': 10,
-        'jitterspeed': 0,
     },
     {
         'size': 35,
         'jitter': 10,
-        'jitterspeed': 0,
     },
 ]
 

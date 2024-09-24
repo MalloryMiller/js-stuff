@@ -223,14 +223,29 @@ when active and the animation for it coming in and out of focus.
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgb(235, 235, 235);
-    mix-blend-mode:darken;
+    background-color: rgb(196, 209, 225);
+    mix-blend-mode:soft-light;
     backdrop-filter: blur(2px);
-    transition: opacity 2s linear;
+    transition: fade-in 2s linear;
     position: fixed;
     z-index: 2;
 }
 
+
+
+#current-image {
+    z-index: 3;
+    position: fixed;
+    top: 0px;
+    height: 100vh;
+}
+
+.img-enter  {
+    animation: slide-in 1s ease-out ;
+}
+.img-leave  {
+    transition: slide-out .5s ease-in ;
+}
 
 
 /*
@@ -263,8 +278,10 @@ ANIMATIONS
 }
 
 @keyframes slide-in {
-    0% { transform: translate(-100%, 0%);}
-    100% { transform: translate(0%, 0%);}
+    0% { transform: translate(-100%, 0%);
+    opacity: 0;}
+    100% { transform: translate(0%, 0%);
+    opacity: 100;}
     
 }
 

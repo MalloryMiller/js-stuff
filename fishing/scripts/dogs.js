@@ -61,7 +61,7 @@ function fourth_speak() {
         {"speaker": "M4L4MUt3", "text": "But for some reason it was offline, so."} , 
         {"speaker": "M4L4MUt3", "text": "I just tried to look busy while everyone else did their thing."} , 
         {"speaker": "M4L4MUt3", "text": "Plus I, like, forgot which of the <span style='color: red'>five</span> letters I was supposed to do... Hahaha..."} , 
-        {"speaker": "Cnvs", "text": "Anyway thanks for the rescue!"} , 
+        {"speaker": "M4L4MUt3", "text": "Anyway thanks for the rescue!"} , 
         [{choice: "Back at it then...", onclick: "level_up()"}],
     ])
 }
@@ -87,7 +87,7 @@ function sixth_speak() {
 function no_more() {
     newText([
         {"text": "You've fished... a boot?"} , 
-        [{choice: "You know what? I like boots.", onclick: "level_up()"},{choice: "Reset Puzzle", onclick: "reset_puzzle_speeches()"}],
+        [{choice: "You know what? I like boots.", onclick: "level_up()"},{choice: "Reset Puzzle", onclick: "location.reload()"}],
     ])
 }
 

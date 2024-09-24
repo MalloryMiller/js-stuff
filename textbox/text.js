@@ -46,6 +46,8 @@ function newText(to_say) {
 
     textbox.setAttribute("onclick", "next_text()")
 
+    var imag = document.getElementById("current-image");
+    imag.setAttribute("class", "img-enter");
 
     var focus = document.getElementById("focus");
     focus.setAttribute("class", "unfocussed");
@@ -84,22 +86,48 @@ function next_text() {
 
 
 function changeImage(name, pose) {
-    var image = document.getElementById("speaking-sprite");
-    source = "sprites/" + name;
+    var cur_img = document.getElementById("current-image");
+
+    var current_value = cur_img.src;
+    if (current_value != undefined) {
+        current_value = current_value.split("/");
+        current_value = current_value[current_value.length - 1];
+        current_value = current_value.substring(0, current_value.length - 4);
+        current_value = current_value.split("-")[0];
+    }
+
+
+    source = "../textbox/sprites/" + name;
     if (pose != undefined) source += pose;
     source += ".png"
-    image.src = source;
-    if (image.name != name){
-        console.log("NEW NAME")
+    cur_img.src = source;
 
+    if (current_value != name && current_value != "" && current_value != undefined && current_value != null){
+        console.log("new speaker!")
+        console.log(current_value);
+        console.log(name)
+
+        cur_img.addEventListener("transitionend", () => {
+            console.log("swap")
+            cur_img.src = source;
+            cur_img.setAttribute("class", "img-enter");
+        });
+        
+        cur_img.setAttribute("class", "img-leave");
+
+
+    } else {
+        cur_img.src = source;
     }
-    image.name = name; // save original image
+    
 
-    image.onerror = function() { // doesn't exist
-        image.src = "";
-        image.name = "";
-    }
+}
 
+document.getElementById("current-image").onerror = function() { // doesn't exist
+    var image = document.getElementById("speaking-sprite");
+    var cur_img = document.getElementById("current-image");
+    cur_img.src = "";
+    image.alt = "";
 }
 
 
@@ -121,9 +149,9 @@ function changeText(change, start=false) {
         finishText()
         return;
     }
-    
     changeImage(current_text[current_pos]["speaker"], current_text[current_pos]["pose"]);
 
+    
 
     if (new_text != undefined) {
         next.setAttribute("class", "invisible");
@@ -202,6 +230,7 @@ function finishText() {
     current_text = []; //reset
     current_pos = -1;  //reset
     speaker = null;    //reset
+    changeImage(speaker, "");
       
 }
 
@@ -258,12 +287,3 @@ function unhideText() {
 function unhideAllText() {
     not_skipped = false;
 }
-
-
-
-function testText() {
-    newText([{"speaker": "Cyn", "text": "oh look at that! Honestly, I wasn't expecting to win... maybe there's still hope, haha."}, [{choice: "eat an entire packet of hot peppers with no milk", onclick: "changeText(1)"},{choice: "no", onclick: "changeText(-10)"}], {"speaker": "Eda", "text":"mary had a little lamb little lamb little lambmary had a little lamb little lamb little lamb mary had a little lamb little lamb little lamb mary had a little lamb little lamb little lamb mary had a little lamb little lamb little lamb mary had a little lamb little lamb little lamb mary had a little lamb little lamb little lamb mary had a little lamb little lamb little lambmary had a little lamb little lamb little lamb mary had a little lamb little lamb little lamb mary had a little lamb little lamb little lamb mary had a little lamb little lamb little lamb mary had a little lamb little lamb little lamb mary had a little lamb little lamb little lamb mary had a little lamb little lamb little lamb lamb mary had a little lamb little lamb little lamb mary had a little lamb little lamb little lambmary had a little lamb little lamb little lamb mary had a little lamb little lamb little lamb mary had a little lamb little lamb little lamb mary had a little lamb little lamb little lamb mary had a little lamb little lamb little lamb mary had a little lamb little lamb little lamb mary had a little lamb little lamb little lamb  lamb mary had a little lamb little lamb little lamb mary had a little lamb little lamb little lambmary had a little lamb little lamb little lamb mary had a little lamb little lamb little lamb mary had a little lamb little lamb little lamb mary had a "} , 
-    {"speaker": "Eda", "text": "<span  style='color: aqua;'> neat</span>-o"}, 
-    {"text": "kinda cool."}, {"Nifty":'<div class="jitter"> EAT MY JORTS</div>'}, {"Cyn":'<div class="jitter2">                                                        W H a t</div>'}]);
-}
-
