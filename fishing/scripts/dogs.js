@@ -1,12 +1,6 @@
 
 
-function level_up() {
-    changeText(1);
-    run();
-}
-
-
-function first_speak() {
+function retrvr() {
     newText([
         {"speaker": "R3TRVR", "text": "Thank you, you've saved me!"} , 
         {"speaker": "R3TRVR", "text": "My crew and I were trying to leave orbit when our ship was suddenly attacked by some kind of virus."} ,
@@ -21,7 +15,7 @@ function first_speak() {
     ])
 }
 
-function second_speak() {
+function ozie() {
     newText([
         {"speaker": "0ZI3", "text": "That was so much fun! Can we go again?"} ,  
         [{choice: "Any progress on the ship's puzzle?", onclick: "changeText(3)"},{choice: "Again?!", onclick: "changeText(1)"}],
@@ -35,7 +29,7 @@ function second_speak() {
     ])
 }
 
-function third_speak() {
+function terier() {
     newText([
         {"speaker": "T3RI3R", "text": "Ah what a valiant rescue! A bravest of endeavors!"} , 
         {"speaker": "T3RI3R", "text": "What a story this shall make, generations shall sing your praise, kind stranger!"} , 
@@ -51,7 +45,7 @@ function third_speak() {
     ])
 }
 
-function fourth_speak() {
+function malamute() {
     newText([
         {"speaker": "M4L4MUt3", "text": "Hi Hi!"} , 
         {"speaker": "M4L4MUt3", "text": "..."} , 
@@ -66,7 +60,7 @@ function fourth_speak() {
     ])
 }
 
-function fifth_speak() {
+function podle() {
     newText([
         {"speaker": "P0DL3", "text": "..."} , 
         {"speaker": "P0DL3", "text": "The Second Letter is <span style='color: red'>L</span>."} , 
@@ -74,7 +68,7 @@ function fifth_speak() {
     ])
 }
 
-function sixth_speak() {
+function doc() {
     newText([
         {"speaker": "D0C", "text": "Greetings, friend. Thank you for the assist."} , 
         {"speaker": "D0C", "text": "I presume you're collecting what the crew found of the puzzle on board?"} , 
@@ -84,7 +78,7 @@ function sixth_speak() {
     ])
 }
 
-function no_more() {
+function boot() {
     newText([
         {"text": "You've fished... a boot?"} , 
         [{choice: "You know what? I like boots.", onclick: "level_up()"},{choice: "Reset Puzzle", onclick: "location.reload()"}],
@@ -92,18 +86,20 @@ function no_more() {
 }
 
 
-const speakers = [first_speak, second_speak, third_speak, fourth_speak, fifth_speak, sixth_speak, no_more];
+const speakers = [retrvr, ozie, terier, malamute, podle, doc, boot];
 var current_speaker = 0;
+
+
+
+function level_up() {
+    changeText(1);
+    run();
+}
+
 
 function dog_speak() {
     speakers[current_speaker]();
     current_speaker++;
     if (current_speaker > speakers.length - 1) current_speaker = speakers.length - 1
 }
-
-function reset_puzzle_speeches() {
-    changeText(1);
-    current_speaker = 0;
-}
-
 
