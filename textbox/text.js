@@ -40,7 +40,7 @@ let not_skipped = true;
 
 
 function newText(to_say) {
-    deleteText();
+    //deleteText();
     var textbox = document.getElementById("textbox");
     
 
@@ -54,7 +54,7 @@ function newText(to_say) {
     focus.setAttribute("class", "unfocussed");
 
     var name = document.createElement("div");
-    //name.innerHTML = speaker;
+
     name.id = "speaker"
     name.setAttribute("class", "textbox-label");
     textbox.appendChild(name);
@@ -66,7 +66,7 @@ function newText(to_say) {
     textbox.appendChild(text_holder);
 
 
-    current_text = to_say;
+    current_text = preloadImages(to_say);
     current_pos = -1;
 
 
@@ -89,6 +89,8 @@ function next_text() {
 function changeImage(name, pose) {
     var cur_img = document.getElementById("current-image");
 
+    if (name == null && name == undefined || name == "") return;
+
     var current_value = cur_img.src;
     console.log(current_value)
     if (current_value != undefined) {
@@ -96,7 +98,7 @@ function changeImage(name, pose) {
         current_value = current_value[current_value.length - 1];
         if (current_value.split(".")[1] != "png") {
             current_value = undefined;
-            console.log("had no source before")
+            console.log("had no source before");
         } else {
             current_value = current_value.substring(0, current_value.length - 4);
             current_value = current_value.split("-")[0];
@@ -104,14 +106,9 @@ function changeImage(name, pose) {
     }
 
 
-    source = "../textbox/sprites/" + name;
-    if (pose != undefined) source += pose;
-    source += ".png"
-
-
     if (current_value != name){
 
-        console.log("new speaker!")
+        console.log("new speaker! " + name)
 
         if (current_value != null && current_value != undefined && current_value != "") {
             // if the previous slide had an image so you have to swap em
@@ -123,7 +120,7 @@ function changeImage(name, pose) {
             // if no prev image so just slide
             cur_img.setAttribute("class", "");
             console.log("slide, " + current_value)
-            cur_img.src = source;
+            cur_img.src = current_text[current_pos].img.src;
             cur_img.setAttribute("class", "img-enter");
             console.log(name)
 
@@ -133,15 +130,35 @@ function changeImage(name, pose) {
         // If no change in speaker
 
         console.log("same, " + current_value)
-        cur_img.src = source;
+        cur_img.src = current_text[current_pos].img.src;
     }
     
 
 }
 
+
+function preloadImages(current_text) {
+    //not sure if this works as intended...
+    for (var i = 0; i < current_text.length; i++) {
+        if (current_text[i].speaker != undefined) {
+            current_text[i].img = new Image()
+
+            source = "../textbox/sprites/" + current_text[i].speaker;
+            if (current_text[i].pose != undefined) source += pose;
+            source += ".png"
+            current_text[i].img.src = source;
+            console.log(source);
+        }
+    }
+
+    return current_text;
+}
+
+
+
 function slide_in() {
     var cur_img = document.getElementById("current-image");
-    cur_img.src = source;
+    cur_img.src = current_text[current_pos].img.src;
     cur_img.setAttribute("class", "img-enter");
     cur_img.removeEventListener("animationend", slide_in);
     
@@ -234,6 +251,17 @@ function deleteText(){
     box.setAttribute("class", "")
     box.removeEventListener("animationend", deleteText)
     speaker = null;
+    var cur_img = document.getElementById("current-image");
+    cur_img.addEventListener("animationend", delete_image);
+    cur_img.setAttribute("class", "img-leave");
+
+}
+
+function delete_image() {
+    var cur_img = document.getElementById("current-image");
+    cur_img.src = "";
+    cur_img.removeEventListener("animationend", delete_image);
+    console.log("removed");
 
 }
 
@@ -311,5 +339,4 @@ function unhideText() {
 function unhideAllText() {
     not_skipped = false;
 }
-
 

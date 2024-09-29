@@ -249,7 +249,7 @@ when active and the animation for it coming in and out of focus.
 
 
 /*
-ANIMATIONS  
+ANIMATIONS
 */
 
 @keyframes fade-in {
@@ -278,16 +278,32 @@ ANIMATIONS
 }
 
 @keyframes slide-in {
-    0% { transform: translate(-100%, 0%);
-    opacity: 0;}
-    100% { transform: translate(0%, 0%);
-    opacity: 100;}
+    0% { 
+        transform: translate(-100%, 0%);
+        filter: brightness(0);
+    }
+    40% { 
+        filter: brightness(0);
+    }
+    100% { 
+        transform: translate(0%, 0%);
+        filter: brightness(1);
+    }
     
 }
 
 @keyframes slide-out {
-    0% { transform: translate(0%, 0%);}
-    100% { transform: translate(-100%, 0%);}
+    0% { 
+        transform: translate(0%, 0%);
+        filter: brightness(1)
+    }
+    40% { 
+        filter: brightness(0);
+    }
+    100% { 
+        transform: translate(-100%, 0%);
+        filter: brightness(0)
+    }
     
 }
 
