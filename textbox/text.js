@@ -89,38 +89,59 @@ function changeImage(name, pose) {
     var cur_img = document.getElementById("current-image");
 
     var current_value = cur_img.src;
+    console.log(current_value)
     if (current_value != undefined) {
         current_value = current_value.split("/");
         current_value = current_value[current_value.length - 1];
-        current_value = current_value.substring(0, current_value.length - 4);
-        current_value = current_value.split("-")[0];
+        if (current_value.split(".")[1] == "html") {
+            current_value = undefined;
+        } else {
+            current_value = current_value.substring(0, current_value.length - 4);
+            current_value = current_value.split("-")[0];
+        }
     }
 
 
     source = "../textbox/sprites/" + name;
     if (pose != undefined) source += pose;
     source += ".png"
-    cur_img.src = source;
 
-    if (current_value != name && current_value != "" && current_value != undefined && current_value != null){
+
+    if (current_value != name){
+
         console.log("new speaker!")
-        console.log(current_value);
-        console.log(name)
 
-        cur_img.addEventListener("transitionend", () => {
-            console.log("swap")
+        if (current_value != null && current_value != undefined && current_value != "") {
+            // if the previous slide had an image so you have to swap em
+            console.log(current_value)
+            cur_img.setAttribute("class", "img-leave")
+            cur_img.addEventListener("animationend", slide_in);
+
+        } else {
+            // if no prev image so just slide
+            console.log("slide, " + current_value)
             cur_img.src = source;
             cur_img.setAttribute("class", "img-enter");
-        });
-        
-        cur_img.setAttribute("class", "img-leave");
+            console.log(name)
 
+        }
 
     } else {
+        // If no change in speaker
+
+        console.log("same, " + current_value)
         cur_img.src = source;
     }
     
 
+}
+
+function slide_in() {
+    var cur_img = document.getElementById("current-image");
+    cur_img.src = source;
+    cur_img.setAttribute("class", "img-enter");
+    cur_img.removeEventListener("animationend", slide_in);
+    
 }
 
 document.getElementById("current-image").onerror = function() { // doesn't exist
@@ -161,7 +182,7 @@ function changeText(change, start=false) {
 
         // TODO: UPDATE IMAGE
         
-        if (speaker != undefined) {
+        if (speaker != undefined && speaker != null) {
             speaker_box.innerHTML = speaker;
 
             if (special_speakers.includes(speaker)) {
@@ -209,6 +230,7 @@ function deleteText(){
     box.innerHTML = "";
     box.setAttribute("class", "")
     box.removeEventListener("animationend", deleteText)
+    speaker = null;
 
 }
 
@@ -229,8 +251,7 @@ function finishText() {
 
     current_text = []; //reset
     current_pos = -1;  //reset
-    speaker = null;    //reset
-    changeImage(speaker, "");
+    speaker = null;    //reset 
       
 }
 

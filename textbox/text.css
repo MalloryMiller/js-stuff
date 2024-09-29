@@ -244,12 +244,12 @@ when active and the animation for it coming in and out of focus.
     animation: slide-in 1s ease-out ;
 }
 .img-leave  {
-    transition: slide-out .5s ease-in ;
+    animation: slide-out .5s ease-in ;
 }
 
 
 /*
-ANIMATIONS
+ANIMATIONS  
 */
 
 @keyframes fade-in {
