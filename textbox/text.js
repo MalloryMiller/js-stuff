@@ -16,6 +16,7 @@ const SPECIAL_TEXT_SPEEDS = {
 let current_text = [];
 let current_pos = -1;
 let speaker = null;
+let current_images = [];
 
 // TEXTBOX STATUS
 let not_skipped = true;
@@ -93,8 +94,9 @@ function changeImage(name, pose) {
     if (current_value != undefined) {
         current_value = current_value.split("/");
         current_value = current_value[current_value.length - 1];
-        if (current_value.split(".")[1] == "html") {
+        if (current_value.split(".")[1] != "png") {
             current_value = undefined;
+            console.log("had no source before")
         } else {
             current_value = current_value.substring(0, current_value.length - 4);
             current_value = current_value.split("-")[0];
@@ -119,6 +121,7 @@ function changeImage(name, pose) {
 
         } else {
             // if no prev image so just slide
+            cur_img.setAttribute("class", "");
             console.log("slide, " + current_value)
             cur_img.src = source;
             cur_img.setAttribute("class", "img-enter");
@@ -308,3 +311,5 @@ function unhideText() {
 function unhideAllText() {
     not_skipped = false;
 }
+
+

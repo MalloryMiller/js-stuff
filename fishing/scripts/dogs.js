@@ -1,5 +1,7 @@
 
 
+
+
 function retrvr() {
     newText([
         {"speaker": "R3TRVR", "text": "Thank you, you've saved me!"} , 
@@ -54,7 +56,8 @@ function malamute() {
         {"speaker": "M4L4MUt3", "text": "Funny story I, uhm, usually just ask the onboard ship assistant to do that kind of thing."} , 
         {"speaker": "M4L4MUt3", "text": "But for some reason it was offline, so."} , 
         {"speaker": "M4L4MUt3", "text": "I just tried to look busy while everyone else did their thing."} , 
-        {"speaker": "M4L4MUt3", "text": "Plus I, like, forgot which of the <span style='color: red'>five</span> letters I was supposed to do... Hahaha..."} , 
+        {"speaker": "M4L4MUt3", "text": "Plus I, like, forgot which of the <span style='color: red'>five</span> letters I was supposed to do... Hahaha..."} ,         
+        {"speaker": "R3TRVR", "text": "..."} , 
         {"speaker": "M4L4MUt3", "text": "Anyway thanks for the rescue!"} , 
         [{choice: "Back at it then...", onclick: "level_up()"}],
     ])
