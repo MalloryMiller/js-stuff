@@ -34,7 +34,7 @@
 }
 
 .drop-button {
-    width:100px;
+    width:20vh;
     height: 100px;
     position:absolute;
     bottom: 20vh;
