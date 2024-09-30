@@ -1,5 +1,16 @@
 
 
+function instructions() {
+    newText([
+        {"speaker": "K9-RETRIEVAL-UNIT", "text": "The K9RU (K9-RETRIEVAL-UNIT) is a dredging machine designed to recover lost personel."} ,
+        {"speaker": "K9-RETRIEVAL-UNIT", "text": "It consists of a magnetized crane and a target detection system."} ,
+        {"speaker": "K9-RETRIEVAL-UNIT", "text": "In order to steady the crane, hold the button."} ,
+        {"speaker": "K9-RETRIEVAL-UNIT", "text": "Once the yellow aiming marker is over a green area, release the button to dredge."} ,
+        {"speaker": "K9-RETRIEVAL-UNIT", "text": "It consists of a magnetized crane and a target detection system."} ,
+        ])
+
+}
+
 
 
 function retrvr() {
@@ -19,14 +30,14 @@ function retrvr() {
 
 function ozie() {
     newText([
-        {"speaker": "0ZI3", "text": "That was so much fun! Can we go again?"} ,  
+        {"speaker": "O2I3", "text": "That was so much fun! Can we go again?"} ,  
         [{choice: "Any progress on the ship's puzzle?", onclick: "changeText(3)"},{choice: "Again?!", onclick: "changeText(1)"}],
-        {"speaker": "0ZI3", "text": "Again! Again!"} , 
+        {"speaker": "O2I3", "text": "Again! Again!"} , 
         [{choice: "Any progress on the ship's puzzle?", onclick: "changeText(1)"},{choice: "Again?!?", onclick: "changeText(-1)"}],
-        {"speaker": "0ZI3", "text": "Yeah I know it! You want it?"} , 
-        {"speaker": "0ZI3", "text": "Aww but where's the fun if you don't solve it yourself! Hmm..."} , 
-        {"speaker": "0ZI3", "text": "Oh! Oh! Here: <span style='color: red'>The fourth letter can be found by looking at the second half of the first!</span>"} , 
-        {"speaker": "0ZI3", "text": "Hope that helps, friend! Again, Again!"} , 
+        {"speaker": "O2I3", "text": "Yeah I know it! You want it?"} , 
+        {"speaker": "O2I3", "text": "Aww but where's the fun if you don't solve it yourself! Hmm..."} , 
+        {"speaker": "O2I3", "text": "Oh! Oh! Here: <span style='color: red'>The fourth letter can be found by looking at the second half of the first!</span>"} , 
+        {"speaker": "O2I3", "text": "Hope that helps, friend! Again, Again!"} , 
         [{choice: "Again!", onclick: "level_up()"}],
     ])
 }
@@ -39,7 +50,7 @@ function terier() {
         {"speaker": "T3RI3R", "text": "A splendiferous occasion! A phenomenal and courageous venture!"} , 
         {"speaker": "T3RI3R", "text": "There I was, in the most dire of circumstances... My oxygen running low! My doggy paddle not paddling hard enough to keep my heavy equipment above water!"} , 
         {"speaker": "T3RI3R", "text": "I was permitted in those moments to contemplate my life. All the things which one wishes to do but never would get the chance. All the games of fetch left to play, the kibble left to eat..."} , 
-        {"speaker": "T3RI3R", "text": "And just as I began to believe that the sea in its callousnes would let swing its Sword of Damocles, something happened!"} , 
+        {"speaker": "T3RI3R", "text": "And just as I began to believe that the sea in its callousnesss would let swing its Sword of Damocles, something happened!"} , 
         {"speaker": "T3RI3R", "text": "From the sky like a god from the machine, I was pulled from my watery peril by none other than you!"} , 
         {"speaker": "T3RI3R", "text": "Of course for your incredible endeavors I must bequeath you a reward:"} , 
         {"speaker": "T3RI3R", "text": "<span style='color: red'>The last letter of the puzzle is the first plus seventeen!</span>"} , 

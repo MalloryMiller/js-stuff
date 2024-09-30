@@ -3,6 +3,7 @@
 #target {
     border-radius: 25px;
     height: 50px;
+    width: 0%;
     background-color: rgb(6, 93, 6);
     z-index: inherit;
     box-shadow: inset 0em 0em 70px rgb(13, 255, 0);
@@ -48,4 +49,47 @@
     background-image: url('bg.png');
     background-attachment: fixed;
     background-position: center;
+}
+
+
+
+.K9-RETRIEVAL-UNIT {
+    color: rgb(40, 225, 59) !important;
+    font-style: oblique  !important;
+    background: linear-gradient(0deg, rgb(1, 18, 1) 1%, rgb(0, 0, 0)66%)  !important;
+    border-color: rgb(40, 225, 59)  !important;
+    border-style: solid  !important;
+    font-family: 'Courier New', Courier, monospace  !important;
+    text-transform:capitalize;
+    
+}
+
+
+.R3TRVR {
+    background: linear-gradient(0deg, rgb(31, 15, 0) 1%, rgba(41, 28, 1, 0.916)66%) !important;
+}
+
+.O2I3 {
+    background: linear-gradient(0deg, rgb(0, 31, 21) 1%, rgba(1, 40, 41, 0.916)66%) !important;
+
+}
+
+.T3RI3R {
+    background: linear-gradient(0deg, rgb(17, 31, 0) 1%, rgba(2, 41, 1, 0.916)66%) !important;
+
+}
+
+.M4L4MUt3 {
+    background: linear-gradient(0deg, rgb(0, 9, 31) 1%, rgba(1, 20, 41, 0.916)66%) !important;
+
+}
+
+.P0DL3 {
+    background: linear-gradient(0deg, rgb(26, 0, 31) 1%, rgba(24, 1, 41, 0.916)66%) !important;
+
+}
+
+.D0C {
+    background: linear-gradient(0deg, rgb(31, 0, 0) 1%, rgba(41, 1, 18, 0.916)66%) !important;
+
 }

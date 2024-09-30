@@ -84,12 +84,16 @@ function run() {
         if ((k.key == " " || k.code == "Space")) {
             drop();
         }
-      }
+    }
+    document.body.pointerup = function(k) {
+        drop();
+    }
     document.body.onkeydown = function(k) {
         if ((k.key == " " || k.code == "Space")) {
             slow();
         }
     }
+
 }
   
 

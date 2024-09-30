@@ -8,7 +8,7 @@ Styling for the background, size and overall look of the text box.
 
     margin: 0px;
     padding: 0px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier;
 
 
     bottom: 5px;
@@ -23,25 +23,21 @@ Styling for the background, size and overall look of the text box.
     width: calc(100% - 20vw - 10px);
     border-radius: 20px;
 
-    background: linear-gradient(0deg, rgb(13, 16, 41) 1%, rgba(9, 15, 43, 0.894)66%);
+    background: linear-gradient(0deg, rgb(28, 28, 28) 1%, rgba(30, 30, 30, 0.916)66%);
     
 
     color: white;
-    border-color: white;
+    border-color: rgb(76, 76, 76);
     border-width: 5px;
-    border-style: solid;
+    border-style: double;
     
     overflow: hidden;
     
-    box-shadow: inset 0em 0em 60px rgba(7, 11, 43, 0.87);
+    box-shadow: inset 0em 0em 60px rgba(0, 0, 0, 0.87);
     position: fixed;
     z-index: 4;
 }
 
-
-.Terminal {
-    background-color: brown;
-}
 
 
 /*
@@ -210,11 +206,13 @@ when active and the animation for it coming in and out of focus.
     width: 100%;
     height: 100%;
     background-color: rgba(235, 235, 235, 0.359);
-    backdrop-filter: blur(5px);
     opacity: 0;
     transition: opacity 0.5s linear;
     position: fixed;
     z-index: 2;
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px)!important;
 
 }
 
@@ -223,10 +221,12 @@ when active and the animation for it coming in and out of focus.
     width: 100%;
     height: 100%;
     background-color: rgba(196, 209, 225, 0.456);
-    backdrop-filter: blur(5px);
     animation: fade-in 1.25s linear;
     position: fixed;
     z-index: 2;
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px)!important;
 }
 
 

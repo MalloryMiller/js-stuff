@@ -205,11 +205,9 @@ function changeText(change, start=false) {
         if (speaker != undefined && speaker != null) {
             speaker_box.innerHTML = speaker;
 
-            if (special_speakers.includes(speaker)) {
-                document.getElementById("textbox").setAttribute("class", "active textbox " + speaker);
-            } else {
-                document.getElementById("textbox").setAttribute("class", "active textbox");
-            }
+            document.getElementById("textbox").setAttribute("class", speaker + " active textbox");
+
+            
 
         } else {
             speaker_box.innerHTML = "";

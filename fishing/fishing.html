@@ -14,7 +14,19 @@
 <body id="body" class="fishing-bg" onload="run()">
   <div id="focus" class="focussed"></div>
 
-  <button  class="drop-button" id="drop-button" onmousedown="slow()" onmouseup="drop()" onmouseleave="mouse_leave_drop()">STEADY</button>
+  <div class="dredger">
+    <button  class="drop-button" id="drop-button" 
+      onmousedown="slow()" 
+      onmouseup="drop()" 
+      onmouseleave="mouse_leave_drop()">
+      STEADY
+    </button>
+
+    <button  class="maual"
+      onclick="instructions()">
+      MANUAL
+    </button>
+  </div>
 
   <div id="attack-bar">
     <div id="target"></div>
