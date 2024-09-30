@@ -92,13 +92,11 @@ function changeImage(name, pose) {
     if (name == null && name == undefined || name == "") return;
 
     var current_value = cur_img.src;
-    console.log(current_value)
     if (current_value != undefined) {
         current_value = current_value.split("/");
         current_value = current_value[current_value.length - 1];
         if (current_value.split(".")[1] != "png") {
             current_value = undefined;
-            console.log("had no source before");
         } else {
             current_value = current_value.substring(0, current_value.length - 4);
             current_value = current_value.split("-")[0];
@@ -108,28 +106,28 @@ function changeImage(name, pose) {
 
     if (current_value != name){
 
-        console.log("new speaker! " + name)
-
         if (current_value != null && current_value != undefined && current_value != "") {
             // if the previous slide had an image so you have to swap em
-            console.log(current_value)
             cur_img.setAttribute("class", "img-leave")
             cur_img.addEventListener("animationend", slide_in);
 
         } else {
             // if no prev image so just slide
             cur_img.setAttribute("class", "");
-            console.log("slide, " + current_value)
             cur_img.src = current_text[current_pos].img.src;
+
+            if (!image_exists(cur_img.src)) {
+                cur_img.setAttribute("style", "display: none;");
+            } else {
+                cur_img.setAttribute("style", "");
+            }
+
             cur_img.setAttribute("class", "img-enter");
-            console.log(name)
 
         }
 
     } else {
         // If no change in speaker
-
-        console.log("same, " + current_value)
         cur_img.src = current_text[current_pos].img.src;
     }
     
@@ -139,6 +137,7 @@ function changeImage(name, pose) {
 
 function preloadImages(current_text) {
     //not sure if this works as intended...
+
     for (var i = 0; i < current_text.length; i++) {
         if (current_text[i].speaker != undefined) {
             current_text[i].img = new Image()
@@ -147,14 +146,25 @@ function preloadImages(current_text) {
             if (current_text[i].pose != undefined) source += pose;
             source += ".png"
             current_text[i].img.src = source;
-            console.log(source);
         }
     }
 
     return current_text;
 }
 
+function image_exists(src){
 
+    var http = new XMLHttpRequest();
+
+    http.open('HEAD', src, false);
+
+    try {
+        http.send();
+        return http.status != 404;
+    } catch {
+        return false;
+    }
+}
 
 function slide_in() {
     var cur_img = document.getElementById("current-image");
@@ -259,7 +269,6 @@ function delete_image() {
     var cur_img = document.getElementById("current-image");
     cur_img.src = "";
     cur_img.removeEventListener("animationend", delete_image);
-    console.log("removed");
 
 }
 

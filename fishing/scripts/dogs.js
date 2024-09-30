@@ -4,9 +4,9 @@ function instructions() {
     newText([
         {"speaker": "K9-RETRIEVAL-UNIT", "text": "The K9RU (K9-RETRIEVAL-UNIT) is a dredging machine designed to recover lost personel."} ,
         {"speaker": "K9-RETRIEVAL-UNIT", "text": "It consists of a magnetized crane and a target detection system."} ,
-        {"speaker": "K9-RETRIEVAL-UNIT", "text": "In order to steady the crane, hold the button."} ,
-        {"speaker": "K9-RETRIEVAL-UNIT", "text": "Once the yellow aiming marker is over a green area, release the button to dredge."} ,
-        {"speaker": "K9-RETRIEVAL-UNIT", "text": "It consists of a magnetized crane and a target detection system."} ,
+        {"speaker": "K9-RETRIEVAL-UNIT", "text": "For proper operation, the crane must be over a target to successfully magnetize to them."} ,
+        {"speaker": "K9-RETRIEVAL-UNIT", "text": "By default the crane swings quickly. In order to steady the crane to a more reasonable speed, hold the button."} ,
+        {"speaker": "K9-RETRIEVAL-UNIT", "text": "Once the yellow aiming marker is over a green area on theh detection system, release the button to drop the crane into the water."} ,
         ])
 
 }
