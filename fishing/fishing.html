@@ -11,16 +11,16 @@
   <title>Test</title>
 </head>
 
-<body id="body" onload="run()">
+<body id="body" class="fishing-bg" onload="run()">
   <div id="focus" class="focussed"></div>
+
+  <button  class="drop-button" id="drop-button" onmousedown="slow()" onmouseup="drop()" onmouseleave="mouse_leave_drop()">STEADY</button>
 
   <div id="attack-bar">
     <div id="target"></div>
     <div id="aim"></div>
   </div>
   <br />
-  <button  class="drop-button" id="drop-button" onmousedown="slow()" onmouseup="drop()" onmouseleave="mouse_leave_drop()">STEADY</button>
-
   <div id="speaking-sprite"><img id="current-image" /></div>
   <div id="textbox"></div>
   

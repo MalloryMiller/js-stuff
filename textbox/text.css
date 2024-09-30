@@ -211,7 +211,7 @@ when active and the animation for it coming in and out of focus.
     height: 100%;
     background-color: rgb(235, 235, 235);
     mix-blend-mode:darken;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(5px);
     opacity: 0;
     transition: opacity 0.5s linear;
     position: fixed;
@@ -225,7 +225,7 @@ when active and the animation for it coming in and out of focus.
     height: 100%;
     background-color: rgb(196, 209, 225);
     mix-blend-mode:soft-light;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(5px);
     transition: fade-in 2s linear;
     position: fixed;
     z-index: 2;
