@@ -1,7 +1,6 @@
 
 // CONSTS
 
-const special_speakers = ["Terminal"];
 const TEXT_SPEED = 30;
 const SPECIAL_TEXT_SPEEDS = {
     ',': 3,
@@ -21,28 +20,33 @@ let current_images = [];
 // TEXTBOX STATUS
 let not_skipped = true;
 
-
 //example:
 // [{text: "owh, hellow!"}, [{choice: "hi", onclick: "changeText(1)"}, {choice: "no", onclick: "changeText(-1)"}]]
 
 //to_say for newText should be a list of text boxes as shown above.
 
-//Each text box can look like:
+//A text box is one of:
 // for a player choice:
 // - [{choice: "forward one", onclick: "changeText(1)"}, 
 //    {choice: "backward one", onclick: "changeText(-1)"}]
-
 // for a speaking text box:
 // - {"speaker": "Roxie", 
-//    "text": "oh look at that!", 
-//    "sprite": "sprites/Roxie.png"}
+//    "pose": "angry"
+//    "text": "oh look at that!"}
+
 // Any of these can be left blank to show nothing EXCEPT "text"
+// if a file exists matching the speaker + .png in the textbox/sprites folder, that image will be shown
 
 
 function newText(to_say) {
-    //deleteText();
+    // Creates a new text box with the contents of to_say
+    // do not call this function again without the previous text box being resolved
+    // outputs nothing
+
+    deleteText(null, true);
+
     var textbox = document.getElementById("textbox");
-    
+    textbox.setAttribute("tabbable", true);
 
 
     textbox.setAttribute("onclick", "next_text()")
@@ -63,6 +67,7 @@ function newText(to_say) {
 
     var text_holder = document.createElement("p");
     text_holder.setAttribute("id", "active-text")
+    text_holder.setAttribute("tabindex", "0")
     textbox.appendChild(text_holder);
 
 
@@ -81,12 +86,18 @@ function newText(to_say) {
 
 
 function next_text() {
+    // moves to the next text box
+    // outpus nothing
+
     changeText(1);
-    
 }
 
 
-function changeImage(name, pose) {
+function changeImage(name) {
+    // changes the active image to the current value. 
+    //input the current speaker.
+    // outputs nothing
+
     var cur_img = document.getElementById("current-image");
 
     if (name == null && name == undefined || name == "") return;
@@ -117,9 +128,7 @@ function changeImage(name, pose) {
             cur_img.src = current_text[current_pos].img.src;
 
             if (!image_exists(cur_img.src)) {
-                cur_img.setAttribute("style", "display: none;");
-            } else {
-                cur_img.setAttribute("style", "");
+                cur_img.removeAttribute("src");
             }
 
             cur_img.setAttribute("class", "img-enter");
@@ -137,6 +146,7 @@ function changeImage(name, pose) {
 
 function preloadImages(current_text) {
     //not sure if this works as intended...
+    //saves the images in the current_text in advance
 
     for (var i = 0; i < current_text.length; i++) {
         if (current_text[i].speaker != undefined) {
@@ -161,7 +171,7 @@ function image_exists(src){
     try {
         http.send();
         return http.status != 404;
-    } catch {
+    } catch (error) {
         return false;
     }
 }
@@ -252,16 +262,19 @@ function changeText(change, start=false) {
 }
 
 
-function deleteText(){
+function deleteText(anim_event, starting=false){
     // deletes all text in the textbox
     let box = document.getElementById("textbox")
     box.innerHTML = "";
     box.setAttribute("class", "")
     box.removeEventListener("animationend", deleteText)
     speaker = null;
-    var cur_img = document.getElementById("current-image");
-    cur_img.addEventListener("animationend", delete_image);
-    cur_img.setAttribute("class", "img-leave");
+    if (!starting) {
+        //only do this if not the start, if starting it deletes the new image!
+        var cur_img = document.getElementById("current-image");
+        cur_img.addEventListener("animationend", delete_image);
+        cur_img.setAttribute("class", "img-leave");
+    }
 
 }
 

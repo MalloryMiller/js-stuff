@@ -1,0 +1,47 @@
+
+
+.season-background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('bg.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-color: rgb(0, 0, 0);
+    animation: load-in 1s;
+}
+
+
+@keyframes load-in {
+    0% { backdrop-filter: brightness(0%);}
+    10% { backdrop-filter: brightness(0%);}
+    100% { backdrop-filter: brightness(100%);}
+    
+  }
+
+.schmorplorp {
+    background-color: rgb(50, 255, 47);
+}
+
+.winter {
+    background-color: rgb(75, 195, 235);
+}
+
+.spring {
+    background-color: rgb(205, 101, 218);
+}
+
+.pollination {
+    background-color: rgb(234, 255, 47);
+}
+
+.fall {
+    background-color: rgb(255, 158, 47);
+}
+
+.burning {
+    background-color: rgb(255, 47, 85);
+}
+
+.ash {
+    background-color: rgb(63, 63, 63);
+}

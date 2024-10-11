@@ -5,6 +5,7 @@ Styling for the background, size and overall look of the text box.
 */
 
 .textbox {
+    cursor: pointer;
 
     margin: 0px;
     padding: 0px;
@@ -39,6 +40,13 @@ Styling for the background, size and overall look of the text box.
 }
 
 
+/*
+Styling for when the box contains choices instead of speech.
+*/
+.textbox:has(button) {
+    cursor: default;
+}
+
 
 /*
 Name of speaeker styling
@@ -67,7 +75,6 @@ Styling for the section of text box under the name that holds the text itself
     display: flex;
     align-items: left;
     justify-content: space-evenly;
-    flex-wrap: wrap;
     flex-direction: column;
   
 }
