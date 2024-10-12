@@ -105,7 +105,7 @@ function changeImage(name) {
     var current_value = cur_img.src;
     if (current_value != undefined) {
         current_value = current_value.split("/");
-        current_value = current_value[current_value.length - 1];
+        current_value = current_value[current_value.length - 1].split("_")[0];
         if (current_value.split(".")[1] != "png") {
             current_value = undefined;
         } else {
@@ -153,7 +153,7 @@ function preloadImages(current_text) {
             current_text[i].img = new Image()
 
             source = "../textbox/sprites/" + current_text[i].speaker;
-            if (current_text[i].pose != undefined) source += pose;
+            if (current_text[i].pose != undefined) source +=  "_" + current_text[i].pose;
             source += ".png"
             current_text[i].img.src = source;
         }
