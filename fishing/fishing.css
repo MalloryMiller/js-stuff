@@ -74,12 +74,11 @@
 }
 .magnetized {
     background-image: url("assets/button-dwn.png");
-    filter: hue-rotate(90deg);
-    transition: 1s filter ease-out;
+    filter: hue-rotate(90deg) brightness(0.75);
 }
 .busy {
     background-image: url("assets/button-dwn.png");
-    transition: 1s filter ease-in;
+    transition: 0.9s filter ease-out;
 }
 
 
