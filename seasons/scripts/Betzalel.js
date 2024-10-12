@@ -66,14 +66,14 @@ function Betzalel() {
         {"speaker": "Betzalel", pose: "sad", "text": "Unfortunately, we do need to leave our bunker for harvest and trade with other planets... But something terrible has happened to our doors!"}, 
         {"speaker": "Betzalel", "text": "They've locked themselves from the outside!"},
         {"speaker": "Betzalel", pose: "confused", "text": "Breaking the door down would expose us to the rapidly changing seasons' elements, but we only have so many rations..."},
-        {"speaker": "Betzalel", "text": "Please, if there's anyway you can fix this..."},  
+        {"speaker": "Betzalel", "text": "Please, if there's any way you can fix this..."},  
         [
             {choice: "What's this poem next to the door?", onclick: "changeText(1)"}, 
             {choice: "Tell me about the current season.", onclick: "changeText(5)"}, 
             {choice: "Let me look around.", onclick: "seen()"}
         ],
         {"speaker": "Betzalel", pose: "confused", "text": "Poem... on the door? Sorry, you're a little muffled..."},  
-        {"speaker": "Betzalel", "text": "There shouldn't be any 'poem' on the door. It should just display the <span class='hint-emphasis'>current date time</span>."},  
+        {"speaker": "Betzalel", "text": "There shouldn't be any 'poem' on the door. It should just display the <span class='hint-emphasis'>local date time</span>. You know, to help you figure out how long you can stay outside."},  
         {"speaker": "Betzalel", pose: "confused", "text": "That's awful strange... You should <span class='hint-emphasis'>write down what it says</span> just in case..."},  
         [
             {choice: "What's the issue?", onclick: "changeText(-9)"}, 
@@ -86,7 +86,7 @@ function Betzalel() {
         {"speaker": "Betzalel", "text": "Sometimes you can get so consumed with what you've already seen that you stop looking for what you're missing."},
         [
             {choice: "What's the issue?", onclick: "changeText(-14)"}, 
-            {choice: "What's this peom next to the door?", onclick: "changeText(-8)"}, 
+            {choice: "What's this poem next to the door?", onclick: "changeText(-8)"}, 
             {choice: "Let me look around.", onclick: "seen()"}
         ],
     ])
