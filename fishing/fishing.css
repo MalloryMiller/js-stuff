@@ -34,19 +34,11 @@
     transition: transform 1s;
 }
 
-.drop-button {
-    width:20vh;
-    height: 100px;
-    position:absolute;
-    bottom: 20vh;
-    right: 10vw;
-}
-
  
 .fishing-bg {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url('bg.png');
+    background-image: url('assets/bg.png');
     background-attachment: fixed;
     background-position: center;
 }
@@ -63,4 +55,32 @@
     text-transform:capitalize;
     
 }
+
+
+.drop-button {
+    width:20vh;
+    height: 100px;
+    position: absolute;
+    bottom: 20vh;
+    right: 10vw;
+    background-repeat: no-repeat;
+    background-color: rgba(240, 248, 255, 0);
+    border: 0px;
+}
+
+.drop {
+    background-image: url("assets/button-up.png");
+
+}
+.magnetized {
+    background-image: url("assets/button-dwn.png");
+    filter: hue-rotate(90deg);
+    transition: 1s filter ease-out;
+}
+.busy {
+    background-image: url("assets/button-dwn.png");
+    transition: 1s filter ease-in;
+}
+
+
 

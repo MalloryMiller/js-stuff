@@ -246,10 +246,10 @@ when active and the animation for it coming in and out of focus.
 }
 
 .img-enter  {
-    animation: slide-in 1s ease-out ;
+    animation: slide-in 1s ease-in-out ;
 }
 .img-leave  {
-    animation: slide-out .5s ease-in ;
+    animation: slide-out .5s ease-in-out ;
 }
 
 
@@ -284,14 +284,14 @@ ANIMATIONS
 
 @keyframes slide-in {
     0% { 
-        transform: translate(-100%, 0%);
+        opacity: 0;
         filter: brightness(0);
     }
-    40% { 
+    25% { 
         filter: brightness(0);
     }
     100% { 
-        transform: translate(0%, 0%);
+        opacity: 1;
         filter: brightness(1);
     }
     
@@ -299,14 +299,14 @@ ANIMATIONS
 
 @keyframes slide-out {
     0% { 
-        transform: translate(0%, 0%);
+        opacity: 1;
         filter: brightness(1)
     }
-    40% { 
+    25% { 
         filter: brightness(0);
     }
     100% { 
-        transform: translate(-100%, 0%);
+        opacity: 0;
         filter: brightness(0)
     }
     

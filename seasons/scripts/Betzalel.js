@@ -17,7 +17,6 @@ const season_desc = {
     4: "Fall is when we have our harvest. You have to get to the crops fast to collect them all in time, because once the burning starts...",
     5: "The Burning is a religious time for many of our people. The fires represent both the joy and danger in the sponteneity of life.",
     6: "The Ash is seen by many as a time for rest. Unfortunately, with things going the way they are, its difficult to rest comfortably...",
-
 }
 
 

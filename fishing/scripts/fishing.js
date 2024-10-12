@@ -60,18 +60,18 @@ const levels = [
 
 function set_button_to_drop() {
     drop_button = document.getElementById("drop-button");
-    drop_button.innerHTML = "STEADY"
+    drop_button.setAttribute("class", "drop-button drop")
 
 }
 
 function set_button_to_slow() {
     drop_button = document.getElementById("drop-button");
-    drop_button.innerHTML = "MAGNETIZE"
+    drop_button.setAttribute("class", "drop-button magnetized")
 }
 
 function set_button_to_busy() {
     drop_button = document.getElementById("drop-button");
-    drop_button.innerHTML = "BUSY..."
+    drop_button.setAttribute("class", "drop-button busy")
 }
 
 
@@ -79,6 +79,7 @@ function run() {
     place_target()
     interval = setInterval(update, interval_rate)
     target_move_interval = setInterval(jitter_target, 300)
+    set_button_to_drop()
 
     document.body.onkeyup = function(k) {
         if ((k.key == " " || k.code == "Space")) {

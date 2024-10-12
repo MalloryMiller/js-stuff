@@ -3,11 +3,10 @@
 .season-background {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url('bg.png');
     background-attachment: fixed;
     background-position: center;
     background-color: rgb(0, 0, 0);
-    animation: load-in 1s;
+    animation: load-in 0.5s;
 }
 
 
@@ -19,29 +18,29 @@
   }
 
 .schmorplorp {
-    background-color: rgb(50, 255, 47);
+    background-image: url("assets/schmorplorp.png");
 }
 
 .winter {
-    background-color: rgb(75, 195, 235);
+    background-image: url("assets/winter.png");
 }
 
 .spring {
-    background-color: rgb(205, 101, 218);
+    background-image: url("assets/spring.png");
 }
 
 .pollination {
-    background-color: rgb(234, 255, 47);
+    background-image: url("assets/pollination.png");
 }
 
 .fall {
-    background-color: rgb(255, 158, 47);
+    background-image: url("assets/fall.png");
 }
 
 .burning {
-    background-color: rgb(255, 47, 85);
+    background-image: url("assets/burning.png");
 }
 
 .ash {
-    background-color: rgb(63, 63, 63);
+    background-image: url("assets/ash.png");
 }
