@@ -245,6 +245,10 @@ when active and the animation for it coming in and out of focus.
     height: 100vh;
 }
 
+.img-hidden {
+    transform: scale(0);
+}
+
 .img-enter  {
     animation: slide-in 1s ease-in-out ;
 }

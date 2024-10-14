@@ -10,6 +10,8 @@ const SPECIAL_TEXT_SPEEDS = {
     '-': 4
 }
 
+const SPRITE_FOLDER = "../textbox/sprites/"
+
 
 
 let current_text = [];
@@ -152,7 +154,7 @@ function preloadImages(current_text) {
         if (current_text[i].speaker != undefined) {
             current_text[i].img = new Image()
 
-            source = "../textbox/sprites/" + current_text[i].speaker;
+            source = SPRITE_FOLDER + current_text[i].speaker;
             if (current_text[i].pose != undefined) source +=  "_" + current_text[i].pose;
             source += ".png"
             current_text[i].img.src = source;
@@ -187,7 +189,8 @@ function slide_in() {
 document.getElementById("current-image").onerror = function() { // doesn't exist
     var image = document.getElementById("speaking-sprite");
     var cur_img = document.getElementById("current-image");
-    cur_img.src = "";
+    cur_img.src = SPRITE_FOLDER + "blank.png";
+    cur_img.setAttribute("class", "img-hidden")
     image.alt = "";
 }
 
