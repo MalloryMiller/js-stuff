@@ -189,7 +189,7 @@ function slide_in() {
 document.getElementById("current-image").onerror = function() { // doesn't exist
     var image = document.getElementById("speaking-sprite");
     var cur_img = document.getElementById("current-image");
-    cur_img.src = SPRITE_FOLDER + "blank.png";
+    cur_img.src = SPRITE_FOLDER + "blank.png"; // guarenteed existant small file to be scaled to 0
     cur_img.setAttribute("class", "img-hidden")
     image.alt = "";
 }
