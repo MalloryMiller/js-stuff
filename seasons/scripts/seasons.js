@@ -1,4 +1,5 @@
 
+const swap_sec = 11879;
 
 const poems = {
     0: "APPROACHING OUR END AS IT DRAWS NEAR\n\
@@ -49,15 +50,16 @@ const seasons = {
 }
 
 
-const date = new Date();
-const day = date.getDay();
+var date = new Date();
+var day = date.getDay();
 
 function setSeason(){    
-    var poem = document.getElementById("poem")
+    var poem = document.getElementById("poem-content")
     var body = document.getElementById("body")
 
     body.setAttribute("class", "season-background " + seasons[day])
 
-    poem.innerHTML = poems[day].replaceAll("\n", "<br />")
+    poem.innerHTML = poems[day].replaceAll("\n", "<p></p>")
+    
     
 }
