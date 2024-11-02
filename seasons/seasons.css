@@ -6,7 +6,7 @@
     background-attachment: fixed;
     background-position: center;
     background-color: rgb(0, 0, 0);
-    animation: load-in 0.5s;
+    animation: load-in 1s;
     width: 100vw;
     height: 100vh;
     background-position: right;
@@ -27,9 +27,10 @@
     background-size:cover;
     background-repeat: no-repeat;
     
-    width: 64%;
+    width: 63%;
     height:200px;
     min-height: 426px;
+    padding-right: 10px;
     
     margin-top:10vh;
 	transform-origin: center right;
@@ -42,6 +43,7 @@
     scrollbar-width:auto;
 }
 #poem p {
+    
     width:100%
 }
 
@@ -71,6 +73,7 @@
 }
 
 #door {
+    animation: load-in 0.5s;
 
     background-image: url("assets/sample.png");
     background-position: center;
@@ -90,9 +93,9 @@
 
 
 @keyframes load-in {
-    0% { backdrop-filter: brightness(0%);}
-    10% { backdrop-filter: brightness(0%);}
-    100% { backdrop-filter: brightness(100%);}
+    0% {filter: brightness(0%);}
+    10% { filter: brightness(0%);}
+    100% {filter: brightness(100%);}
     
   }
 
@@ -123,3 +126,39 @@
 .ash {
     background-image: url("assets/ash.png");
 }
+
+
+
+
+.schmorplorp #door{
+    background-image: url("assets/schmorplorp_door.png");
+}
+
+.winter #door {
+    background-image: url("assets/winter_door.png");
+}
+
+.spring #door {
+    background-image: url("assets/spring_door.png");
+}
+
+.pollination #door {
+    background-image: url("assets/pollination_door.png");
+    color: yellow  !important;
+}
+
+.fall #door {
+    background-image: url("assets/fall_door.png");
+}
+
+
+.burning #door {
+    background-image: url("assets/burning_door.png");
+
+}
+
+.ash #door {
+    background-image: url("assets/ash_door.png");
+
+}
+
