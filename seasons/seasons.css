@@ -27,15 +27,13 @@
     background-size:cover;
     background-repeat: no-repeat;
     
-    width: 58%;
+    width: 64%;
     height:200px;
     min-height: 426px;
-    min-width: 500px;
     
     margin-top:10vh;
-    margin-left:50px;
 	transform-origin: center right;
-    transform: perspective(100px) rotateY(-6deg) translate(30%, 40px);
+    transform: perspective(100px) rotateY(-5deg) rotateX(1deg) translate(30%, 40px);
 
     overflow: auto;
 
