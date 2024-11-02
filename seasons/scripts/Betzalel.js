@@ -43,7 +43,10 @@ function Betzalel() {
 
     if (seen != "" && seen != seasons[day]) { // seen before on different day
         intro = "Ah! It's you from the <span class='hint-emphasis'>" + seen + "</span>! Good to see you again!";
-        followup = "It's the <span class='hint-emphasis'>" + seasons[day] + "</span> now... how time flies, huh?";
+        
+        followup = "It's the <span class='hint-emphasis'>" + seasons[day] + "</span> now... How time flies, huh?";
+
+        
     } else {
             
         if (seen != "") { // seen before on same day type

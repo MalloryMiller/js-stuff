@@ -34,7 +34,7 @@
     
     margin-top:10vh;
 	transform-origin: center right;
-    transform: perspective(100px) rotateY(-5deg) rotateX(1deg) translate(30%, 40px);
+    transform: perspective(100px) rotateY(-10deg) rotateY(4deg) rotateX(0deg) translate(30%, -41px);
 
     overflow: auto;
 
@@ -55,7 +55,7 @@
     background-color: aqua;
 }
 
-#poem-spacer {
+.poem-spacer {
     padding-top: 200px;
     max-height: 10vh;
 }
@@ -76,7 +76,7 @@
     animation: load-in 0.5s;
 
     background-image: url("assets/sample.png");
-    background-position: center;
+    background-position: right;
     background-size:cover;
     position: absolute;
     background-repeat: no-repeat;

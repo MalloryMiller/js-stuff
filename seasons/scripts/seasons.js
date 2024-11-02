@@ -48,6 +48,15 @@ const seasons = {
     5: "burning",
     6: "ash",
 }
+const season_values = {
+    "schmorplorp": 0,
+    "winter": 1,
+    "spring": 2,
+    "pollination": 3,
+    "fall": 4,
+    "burning": 5,
+    "ash": 6,
+}
 
 
 var date = new Date();
