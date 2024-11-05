@@ -72,3 +72,17 @@ function setSeason(){
     
     
 }
+
+
+function check_for_update() {
+    var new_date = new Date();
+    if (new_date.getDay() != day) {
+        date = new_date
+        day = new_date.getDay()
+        setSeason();
+    }
+}
+
+setInterval(check_for_update, 30000) //check if new day
+// logic being that if they leave the window open for a day they
+// should be able to notice the changing poem

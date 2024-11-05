@@ -37,6 +37,7 @@ Styling for the background, size and overall look of the text box.
     box-shadow: inset 0em 0em 60px rgba(0, 0, 0, 0.87);
     position: fixed;
     z-index: 4;
+    right:0px;
 }
 
 
@@ -210,7 +211,7 @@ when active and the animation for it coming in and out of focus.
 
 .focussing {
     position: absolute;
-    width: 100%;
+    width: 110%;
     height: 100%;
     background-color: rgba(235, 235, 235, 0.359);
     opacity: 0;
@@ -225,7 +226,7 @@ when active and the animation for it coming in and out of focus.
 
 .unfocussed {
     position: absolute;
-    width: 100%;
+    width: 110%;
     height: 100%;
     background-color: rgba(196, 209, 225, 0.456);
     animation: fade-in 1.25s linear;
