@@ -34,7 +34,7 @@
     
     margin-top:10vh;
 	transform-origin: center right;
-    transform: perspective(100px) rotateY(-10deg) rotateY(4deg) rotateX(0deg) translate(30%, -41px);
+    transform: perspective(100px) rotateY(-4deg) rotateZ(-3deg) rotateX(-2deg) translate(27%, 30px);
 
     overflow: auto;
 
@@ -85,7 +85,7 @@
 
     right: 0px;
     padding: 0px;
-    width: 1000px;
+    width: 1150px;
     max-width: 100vw;
     max-height: 100vh;
     overflow: hidden;
