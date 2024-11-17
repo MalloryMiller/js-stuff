@@ -21,7 +21,8 @@
     border-color: rgb(18, 190, 9);
     position:absolute;
     width: 99vw;
-    bottom: 10vh;
+    bottom: 5vh;
+    position:fixed;
     
 }
 
@@ -56,20 +57,15 @@
     
 }
 
-
-.drop-button {
-    width:20vh;
-    height: 100px;
-    position: absolute;
-    bottom: 20vh;
-    right: 10vw;
-    background-repeat: no-repeat;
-    background-color: rgba(240, 248, 255, 0);
-    border: 0px;
-}
-
 .drop {
     background-image: url("assets/button-up.png");
+    transition: 0.1s filter ease-out;
+
+}
+.drop:hover {
+    background-image: url("assets/button-up.png");
+    filter: brightness(1.5);
+    transition: 0.2s filter ease-out;
 
 }
 .magnetized {
@@ -83,4 +79,62 @@
 }
 
 
+
+
+.drop-button {
+    background-size:contain;
+    width: 15vh;
+    height: 11vh;
+    transform: translate(18vh, -3vh);
+    background-repeat: no-repeat;
+    background-color: rgba(240, 248, 255, 0);
+    border: 0px;
+    cursor:pointer;
+}
+
+
+.dredger {
+    background-image: url("assets/pedistal.png");
+    height: 40vh;
+    width: 50vh;
+    background-repeat: no-repeat;
+    background-size:contain;
+    position:absolute;
+    bottom:0px;
+    background-position: center;
+    
+    min-width: 200px;
+
+
+}
+
+
+.manual {
+    background-image: url("assets/manual.png");
+    height: 8vh;
+    width: 30vh;
+    font-size: 5vh;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(95, 255, 47);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain;
+    text-align: center;
+    padding-top: 1ch;
+    margin-top: 3vh;
+    cursor:pointer;
+    filter: brightness(.4);
+    margin-left: auto;
+    margin-right: auto;
+
+    transition: filter 2s ease-out;
+
+}
+
+
+.manual:hover {
+    transition: filter .5s ease-in;
+    filter: brightness(1.75);
+
+}
 
