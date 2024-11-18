@@ -6,7 +6,7 @@ function instructions() {
         {"speaker": "K9-RETRIEVAL-UNIT", "text": "It consists of a magnetized crane and a target detection system."} ,
         {"speaker": "K9-RETRIEVAL-UNIT", "text": "For proper operation, the crane must be over a target to successfully magnetize to them."} ,
         {"speaker": "K9-RETRIEVAL-UNIT", "text": "By default the crane swings quickly. In order to steady the crane to a more reasonable speed, hold the button or [space bar]."} ,
-        {"speaker": "K9-RETRIEVAL-UNIT", "text": "Once the yellow aiming marker is over a green area on the detection system, release to drop the crane into the water."} ,
+        {"speaker": "K9-RETRIEVAL-UNIT", "text": "Once the yellow aiming marker is over a bright green area on the detection system, release to drop the crane into the water."} ,
         ], false)
 
 }
