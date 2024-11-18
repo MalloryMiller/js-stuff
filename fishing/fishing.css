@@ -54,13 +54,17 @@
     border-style: solid  !important;
     font-family: 'Courier New', Courier, monospace  !important;
     text-transform:capitalize;
+
+    transform: translate(0px, -45vh);
     
 }
+
+
 
 .drop {
     background-image: url("assets/button-up.png");
     transition: 0.1s filter ease-out;
-
+    
 }
 .drop:hover {
     background-image: url("assets/button-up.png");
@@ -89,7 +93,7 @@
     background-repeat: no-repeat;
     background-color: rgba(240, 248, 255, 0);
     border: 0px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 
@@ -120,21 +124,20 @@
     background-position: center;
     background-size:contain;
     text-align: center;
-    padding-top: 1ch;
+    padding-top: 3vh;
     margin-top: 3vh;
-    cursor:pointer;
+    cursor: pointer;
     filter: brightness(.4);
     margin-left: auto;
     margin-right: auto;
-
-    transition: filter 2s ease-out;
 
 }
 
 
 .manual:hover {
-    transition: filter .5s ease-in;
+    transition: filter box-shadow background-color .5s ease-in;
     filter: brightness(1.75);
+    background-color: rgba(51, 255, 0, 0.678);
 
 }
 

@@ -19,7 +19,7 @@ Styling for the background, size and overall look of the text box.
     padding-top:0px;
     padding-bottom: 0px;
     min-height: 150px;
-    max-height: 50vh;
+    max-height: 90vh;
 
     width: calc(100% - 20vw - 10px);
     border-radius: 20px;
@@ -68,7 +68,7 @@ Styling for the section of text box under the name that holds the text itself
 */
 #active-text {
     scroll-behavior:auto;
-    max-height: calc(50vh - 200px);
+    max-height: calc(70vh - 200px);
     height: 100%;
     width: 100%;
     overflow: auto;

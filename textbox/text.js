@@ -21,6 +21,7 @@ let current_images = [];
 
 // TEXTBOX STATUS
 let not_skipped = true;
+let focusing = true;
 
 //example:
 // [{text: "owh, hellow!"}, [{choice: "hi", onclick: "changeText(1)"}, {choice: "no", onclick: "changeText(-1)"}]]
@@ -40,10 +41,11 @@ let not_skipped = true;
 // if a file exists matching the speaker + .png in the textbox/sprites folder, that image will be shown
 
 
-function newText(to_say) {
+function newText(to_say, should_focus=true) {
     // Creates a new text box with the contents of to_say
     // do not call this function again without the previous text box being resolved
     // outputs nothing
+    focusing = should_focus
 
     deleteText(null, true);
 
@@ -55,10 +57,10 @@ function newText(to_say) {
 
     var imag = document.getElementById("current-image");
     imag.setAttribute("class", "img-enter");
-
-    var focus = document.getElementById("focus");
-    focus.setAttribute("class", "unfocussed");
-
+    if (focusing) {
+        var focuser = document.getElementById("focus");
+        focuser.setAttribute("class", "unfocussed");
+    }
     var name = document.createElement("div");
 
     name.id = "speaker"
@@ -292,17 +294,17 @@ function delete_image() {
 function finishText() {
     // animates the textbox and focus, resets variables.
 
-    var focus = document.getElementById("focus");
+    var focuser = document.getElementById("focus");
     let box = document.getElementById("textbox")
     box.addEventListener("animationend", deleteText);
-    
-    focus.addEventListener("transitionend", () => {
-        focus.setAttribute("class", "focussed");
-    });
+    if (focusing){
+        focuser.addEventListener("transitionend", () => {
+                focuser.setAttribute("class", "focussed");
+        });
 
-    box.setAttribute("class", "hidden textbox");
-    focus.setAttribute("class", "focussing");
-
+        focuser.setAttribute("class", "focussing");
+    }
+box.setAttribute("class", "hidden textbox");
     current_text = []; //reset
     current_pos = -1;  //reset
     speaker = null;    //reset 
