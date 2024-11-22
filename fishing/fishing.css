@@ -55,7 +55,7 @@
     font-family: 'Courier New', Courier, monospace  !important;
     text-transform:capitalize;
 
-    transform: translate(0px, -45vh);
+    transform: translate(0px, -12vh);
     
 }
 
@@ -130,14 +130,14 @@
     filter: brightness(.4);
     margin-left: auto;
     margin-right: auto;
+    transition: filter 1s ease-out;
 
 }
 
 
 .manual:hover {
-    transition: filter box-shadow background-color .5s ease-in;
+    transition: filter .5s ease-in;
     filter: brightness(1.75);
-    background-color: rgba(51, 255, 0, 0.678);
 
 }
 

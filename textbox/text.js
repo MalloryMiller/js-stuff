@@ -12,6 +12,7 @@ const SPECIAL_TEXT_SPEEDS = {
 
 const SPRITE_FOLDER = "../textbox/sprites/"
 
+let focusing = true; //if the current textbox will have a blured bg
 
 
 let current_text = [];
@@ -21,7 +22,6 @@ let current_images = [];
 
 // TEXTBOX STATUS
 let not_skipped = true;
-let focusing = true;
 
 //example:
 // [{text: "owh, hellow!"}, [{choice: "hi", onclick: "changeText(1)"}, {choice: "no", onclick: "changeText(-1)"}]]
@@ -304,7 +304,7 @@ function finishText() {
 
         focuser.setAttribute("class", "focussing");
     }
-box.setAttribute("class", "hidden textbox");
+    box.setAttribute("class", box.className.replace("active", "hidden"));
     current_text = []; //reset
     current_pos = -1;  //reset
     speaker = null;    //reset 
