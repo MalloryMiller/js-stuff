@@ -151,7 +151,6 @@ Styling for havin the text letters appear one by one.
 
 .next {
     position: fixed;
-    color: white;
     right: 50px;
     bottom: 30px;
     animation: blink-fade 2s infinite linear;

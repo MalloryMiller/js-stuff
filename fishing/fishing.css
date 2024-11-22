@@ -56,6 +56,15 @@
     text-transform:capitalize;
 
     transform: translate(0px, -12vh);
+    transition: filter 1s ease-out;
+    filter: brightness(.75);
+    
+}
+
+
+.K9-RETRIEVAL-UNIT:hover {
+    transition: filter .5s ease-in;
+    filter: brightness(1.5);
     
 }
 
