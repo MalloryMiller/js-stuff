@@ -99,8 +99,8 @@ function run() {
   
 
 function update() {
-    move_target();
     move_aim();
+    move_target();
 }
 
 

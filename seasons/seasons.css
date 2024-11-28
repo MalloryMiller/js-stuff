@@ -76,6 +76,7 @@
     animation: load-in 0.5s;
 
     background-image: url("assets/sample.png");
+    filter: brightness(0);
     background-position: right;
     background-size:cover;
     position: absolute;
@@ -100,30 +101,37 @@
 
 .schmorplorp {
     background-image: url("assets/schmorplorp.png");
+    filter: brightness(1);
 }
 
 .winter {
     background-image: url("assets/winter.png");
+    filter: brightness(1);
 }
 
 .spring {
     background-image: url("assets/spring.png");
+    filter: brightness(1);
 }
 
 .pollination {
     background-image: url("assets/pollination.png");
+    filter: brightness(1);
 }
 
 .fall {
     background-image: url("assets/fall.png");
+    filter: brightness(1);
 }
 
 .burning {
     background-image: url("assets/burning.png");
+    filter: brightness(1);
 }
 
 .ash {
     background-image: url("assets/ash.png");
+    filter: brightness(1);
 }
 
 
@@ -131,33 +139,40 @@
 
 .schmorplorp #door{
     background-image: url("assets/schmorplorp_door.png");
+    filter: brightness(1);
 }
 
 .winter #door {
     background-image: url("assets/winter_door.png");
+    filter: brightness(1);
 }
 
 .spring #door {
     background-image: url("assets/spring_door.png");
+    filter: brightness(1);
 }
 
 .pollination #door {
     background-image: url("assets/pollination_door.png");
+    filter: brightness(1);
     color: yellow  !important;
 }
 
 .fall #door {
     background-image: url("assets/fall_door.png");
+    filter: brightness(1);
 }
 
 
 .burning #door {
     background-image: url("assets/burning_door.png");
+    filter: brightness(1);
 
 }
 
 .ash #door {
     background-image: url("assets/ash_door.png");
+    filter: brightness(1);
 
 }
 

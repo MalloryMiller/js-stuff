@@ -85,8 +85,8 @@ function podle() {
 function doc() {
     newText([
         {"speaker": "D0C", "text": "Greetings, friend. Thank you for the assist."} , 
-        {"speaker": "D0C", "text": "I presume you're collecting what the crew found of the puzzle on board?"} , 
-        {"speaker": "D0C", "text": "I was very close, but my diction is rather poor. <span class='hint-emphasis'>The third letter fits in the blank: ac_te</span>."} , 
+        {"speaker": "D0C", "text": "You're probably collecting what the crew found of the puzzle on board."} , 
+        {"speaker": "D0C", "text": "I was very close, but I don't know so many words. <span class='hint-emphasis'>The third letter fits in the blank: ac_te</span>."} , 
         {"speaker": "D0C", "text": "Hopefully that helps; thank you for your service."} , 
         [{choice: "Thanks for your help!", onclick: "level_up()"}],
     ])
