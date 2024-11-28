@@ -6,7 +6,6 @@
     background-attachment: fixed;
     background-position: center;
     background-color: rgb(0, 0, 0);
-    animation: load-in 1s;
     width: 100vw;
     height: 100vh;
     background-position: right;
@@ -73,7 +72,6 @@
 }
 
 #door {
-    animation: load-in 0.5s;
 
     background-image: url("assets/sample.png");
     filter: brightness(0);
@@ -102,36 +100,43 @@
 .schmorplorp {
     background-image: url("assets/schmorplorp.png");
     filter: brightness(1);
+    animation: load-in 1s;
 }
 
 .winter {
     background-image: url("assets/winter.png");
     filter: brightness(1);
+    animation: load-in 1s;
 }
 
 .spring {
     background-image: url("assets/spring.png");
     filter: brightness(1);
+    animation: load-in 1s;
 }
 
 .pollination {
     background-image: url("assets/pollination.png");
     filter: brightness(1);
+    animation: load-in 1s;
 }
 
 .fall {
     background-image: url("assets/fall.png");
     filter: brightness(1);
+    animation: load-in 1s;
 }
 
 .burning {
     background-image: url("assets/burning.png");
     filter: brightness(1);
+    animation: load-in 1s;
 }
 
 .ash {
     background-image: url("assets/ash.png");
     filter: brightness(1);
+    animation: load-in 1s;
 }
 
 
@@ -140,39 +145,46 @@
 .schmorplorp #door{
     background-image: url("assets/schmorplorp_door.png");
     filter: brightness(1);
+    animation: load-in 0.5s;
 }
 
 .winter #door {
     background-image: url("assets/winter_door.png");
     filter: brightness(1);
+    animation: load-in 0.5s;
 }
 
 .spring #door {
     background-image: url("assets/spring_door.png");
     filter: brightness(1);
+    animation: load-in 0.5s;
 }
 
 .pollination #door {
     background-image: url("assets/pollination_door.png");
     filter: brightness(1);
+    animation: load-in 0.5s;
     color: yellow  !important;
 }
 
 .fall #door {
     background-image: url("assets/fall_door.png");
     filter: brightness(1);
+    animation: load-in 0.5s;
 }
 
 
 .burning #door {
     background-image: url("assets/burning_door.png");
     filter: brightness(1);
+    animation: load-in 0.5s;
 
 }
 
 .ash #door {
     background-image: url("assets/ash_door.png");
     filter: brightness(1);
+    animation: load-in 0.5s;
 
 }
 
