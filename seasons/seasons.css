@@ -41,8 +41,9 @@
     scrollbar-color: rgb(172, 216, 240) rgba(0, 60, 255, 0.116);
     scrollbar-width:auto;
 }
+
+
 #poem p {
-    
     width:100%
 }
 
@@ -188,3 +189,38 @@
 
 }
 
+
+.schmorplorp #poem {
+    color:rgb(212, 114, 48);
+    text-shadow: rgb(255, 51, 0) 1px 0 50px;
+}
+
+.winter #poem {
+    color:rgb(84, 248, 226);
+}
+
+.spring #poem {
+    color:rgb(117, 238, 106);
+}
+
+.pollination #poem {
+    color:rgb(251, 255, 0);
+    text-shadow: rgb(255, 51, 0) 1px 0 50px;
+}
+
+.fall #poem {
+    text-shadow: rgb(0, 38, 255) 1px 0 50px;
+}
+
+
+.burning #poem {
+    color:rgb(255, 206, 206);
+    text-shadow: rgb(0, 0, 0) 1px 0 50px;
+
+}
+
+.ash #poem {
+    color:rgb(255, 255, 255);
+    text-shadow: rgb(255, 98, 59) 1px 0 50px;
+
+}
