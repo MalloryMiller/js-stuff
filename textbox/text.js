@@ -1,6 +1,8 @@
 
 // CONSTS
 
+const FILETYPE = ".svg"
+
 const TEXT_SPEED = 30;
 const SPECIAL_TEXT_SPEEDS = {
     ',': 3,
@@ -158,7 +160,7 @@ function preloadImages(current_text) {
 
             source = SPRITE_FOLDER + current_text[i].speaker;
             if (current_text[i].pose != undefined) source +=  "_" + current_text[i].pose;
-            source += ".png"
+            source += FILETYPE
             current_text[i].img.src = source;
         }
     }
