@@ -94,6 +94,9 @@ function run() {
             slow();
         }
     }
+    document.body.pointerdown = function(k) {
+        slow();
+    }
 
 }
   
