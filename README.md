@@ -18,8 +18,8 @@ This is a general javascript sandbox repository, mostly of stuff for Megapuzzle 
 | ----------- | :-----: |
 | Javascript  | Done    |
 | Page Layout | Done    |
-| Assets      | In Progress    |
-| Overall     | In Progress    |
+| Assets      | In Progress |
+| Overall     | In Progress |
 
 
 ## Four Humors
@@ -28,5 +28,5 @@ This is a general javascript sandbox repository, mostly of stuff for Megapuzzle 
 | ----------- | :-----: |
 | Javascript  | Done    |
 | Page Layout | TODO    |
-| Assets      | TODO    |
+| Assets      | In Progress |
 | Overall     | In Progress |

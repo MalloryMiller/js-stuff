@@ -191,12 +191,13 @@
 
 
 .schmorplorp #poem {
-    color:rgb(212, 114, 48);
-    text-shadow: rgb(255, 51, 0) 1px 0 50px;
+    color:rgb(56, 241, 0);
+    text-shadow: rgb(221, 218, 11) 1px 0 50px;
 }
 
 .winter #poem {
     color:rgb(84, 248, 226);
+    text-shadow: rgb(75, 37, 211) 1px 0 50px;
 }
 
 .spring #poem {
