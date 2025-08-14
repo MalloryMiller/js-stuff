@@ -107,7 +107,7 @@
 
 
 .dredger {
-    background-image: url("assets/pedistal.png");
+    background-image: url("assets/pedistal.svg");
     height: 40vh;
     width: 50vh;
     background-repeat: no-repeat;
@@ -115,6 +115,8 @@
     position:absolute;
     bottom:0px;
     background-position: center;
+    background-position: top;
+    background-size: 90%;
     
     min-width: 200px;
 

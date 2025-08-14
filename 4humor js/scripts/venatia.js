@@ -15,4 +15,3 @@ function venatia_speak() {
         {"speaker": "Venatia", "text": "Cool, tell me how it goes."} 
     ])
 }
-
