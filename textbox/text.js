@@ -54,8 +54,11 @@ function newText(to_say, should_focus=true) {
     var textbox = document.getElementById("textbox");
     textbox.setAttribute("tabbable", true);
 
-
-    textbox.setAttribute("onclick", "next_text()")
+    if (to_say[0].onclick != undefined) {
+        textbox.setAttribute("onclick", to_say[0].onclick)
+    } else {
+        textbox.setAttribute("onclick", "next_text()")
+    }
 
     var imag = document.getElementById("current-image");
     imag.setAttribute("class", "img-enter");
@@ -227,7 +230,6 @@ function changeText(change, start=false) {
         var speaker = current_text[current_pos]["speaker"];
         var speaker_box = document.getElementById("speaker");
 
-        // TODO: UPDATE IMAGE
         
         if (speaker != undefined && speaker != null) {
             speaker_box.innerHTML = speaker;
@@ -355,8 +357,14 @@ function unhideText() {
         setTimeout(unhideText, TEXT_SPEED * speed_multiplier);
         return;
     } else {
+
         var all_text = document.getElementById("textbox");
-        all_text.setAttribute("onclick", "next_text()");
+        if (current_text[current_pos]["onclick"] != undefined) {
+            all_text.setAttribute("onclick", current_text[current_pos]["onclick"])
+        } else {
+            all_text.setAttribute("onclick", "next_text()")
+        }
+        //all_text.setAttribute("onclick", "next_text()");
         next.setAttribute("class", "next");
 
     }
