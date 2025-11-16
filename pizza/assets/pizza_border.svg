@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generator: Blender, SVG Export for Grease Pencil - v2.0 -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" x="0px" y="0px" xmlns="http://www.w3.org/2000/svg" width="1080.000000px" height="1080.000000px" viewBox="0 0 1080.000000 1080.000000">
+	<g id="blender_frame.1">
+		<g id="blender_object.Stroke.1.uuid_0x0">
+			<g id="layer.Fills.uuid_0x1" />
+			<g id="layer.Lines.uuid_0x2">
+				<polyline points="131.215729,-20.886230 124.110428,1077.616577 -16.576538,1080.458740 -0.944710,-13.781006" fill="#FEDA41" stroke="none" fill-opacity="1" />
+				<polyline points="24.634783,368.492432 27.476978,452.336792 101.372971,705.290894 99.952011,614.341064" fill="#FEF987" stroke="none" fill-opacity="1" />
+				<polyline points="1100.041382,125.130310 1.538486,118.024841 -1.303711,-22.662231 1092.935913,-7.030273" fill="#FEDA41" stroke="none" fill-opacity="1" />
+				<polyline points="102.826591,311.023621 20.177767,130.697266 17.448750,14.802246 94.186996,17.644531 412.777252,16.183105 510.692596,105.330444 114.646912,100.946167" fill="#FEF987" stroke="none" fill-opacity="1" />
+				<polyline points="952.600586,1092.537964 959.706055,-5.964844 1100.393188,-8.807007 1084.761108,1085.432617" fill="#FEDA41" stroke="none" fill-opacity="1" />
+				<polyline points="-16.224861,946.521362 1082.277832,953.626953 1085.120117,1094.313965 -9.119569,1078.681885" fill="#FEDA41" stroke="none" fill-opacity="1" />
+				<polyline points="23.213713,533.338989 24.634783,1053.131714 240.267059,1055.919556 189.022461,972.928772 106.948753,970.824280 111.157669,821.408813" fill="#FEF987" stroke="none" fill-opacity="1" />
+				<polyline points="316.027405,980.159668 276.042725,980.159668 324.445221,1051.710693 364.429840,1053.815063" fill="#FEF987" stroke="none" fill-opacity="1" />
+				<polyline points="913.692627,1051.710693 858.976807,988.577393 463.339203,980.159668 518.055054,1051.710693" fill="#FEF987" stroke="none" fill-opacity="1" />
+				<polyline points="975.777161,101.121643 988.391968,760.363159 1062.071777,870.796570 1064.164429,103.225952 982.090576,19.048340 653.795532,19.048340 729.555908,99.017151" fill="#FEF987" stroke="none" fill-opacity="1" />
+			</g>
+		</g>
+	</g>
+</svg>

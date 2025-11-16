@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link href="pizza.css" rel="stylesheet">
+  <link href="../textbox/style.css" rel="stylesheet">
+  <link href="../textbox/text.css" rel="stylesheet">
+  </link>
+
+  <title>Test</title>
+</head>
+
+<body id="body" onload="load_menu_items()">
+  <div id="focus" class="focussed">
+  </div>
+
+
+  
+  <div class="pizza-bg">
+
+
+
+      <div class="pizza-border">
+        <div id="menu-item-list"></div>
+              
+      </div>
+
+      <div id="casheir" onclick="casheir_speak()"></div>
+
+      
+  </div>
+
+  
+
+  <div id="speaking-sprite"><img id="current-image" /></div>
+  <div id="textbox"></div>
+
+  <script src="../textbox/text.js"></script>
+  <script src="scripts/pizza_menu.js"></script>
+  <script src="scripts/cashier.js"></script>
+
+</body>
+
+</html>

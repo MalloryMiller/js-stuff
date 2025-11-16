@@ -1,0 +1,264 @@
+
+#view {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    bottom: 0px;
+}
+
+.pizza-bg {
+    background-repeat: no-repeat;
+    background-color: rgb(27, 22, 22);
+    background-image: url('assets/KenKenBG.svg');
+    background-size: auto 90vh;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    background-position: right top;
+    display: flex;
+    min-width: fit-content;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    align-items: center;
+    
+    justify-content: space-evenly;
+
+
+}
+
+
+#pizza-mini-navbar {
+    width: 100%;
+    height: 20%;
+    background-color: brown;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 20px;
+
+    color: rgb(240, 240, 157);
+    font-size: xx-large;
+}
+
+#pizza-mini-navbar img {
+    height:100%;
+    margin: 15px;
+}
+
+
+
+#menu-item-list {
+    height:100%;
+    width: 100%;
+    overflow: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: hidden;
+
+
+
+    scrollbar-color: rgb(94, 6, 6) #FFDA41FF;
+    scrollbar-width: auto;
+    
+}
+
+#menu-item-list h1 {
+    width: 100%;
+    text-align: center;
+}
+
+#casheir {
+    min-width: 300px;
+    height:90vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('assets/Cashier_interactable.svg');
+
+    aspect-ratio: 1/1.5;
+
+}
+
+
+.pizza-border {
+    border-image-source: url('assets/pizza_border.svg');
+    border-image-slice: 122 125 125 129;
+    border-image-width: 40px 40px 40px 40px;
+    padding: 40px 40px 40px 40px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch;
+    border-width: 30px;
+
+    background-repeat: no-repeat;
+    background-color: rgb(224, 224, 211);
+    background-repeat: repeat-x;
+    background-size: 100% auto;
+
+    height:90vh;
+    max-width: calc(100vw - 80px);
+    aspect-ratio: 0.96/1;
+    display: flex;
+    justify-content: center;
+
+    overflow: hidden;
+    flex-wrap: wrap;
+    
+
+}
+
+
+
+
+.menu-item {
+    padding: 1em;
+    margin: 2em;
+    height: fit-content;
+    max-width: 40%;
+
+    overflow: hidden;
+
+    
+    color: inherit;
+    cursor: pointer;
+    outline: none; 
+    appearance: none;
+    box-shadow: none;
+
+    color:rgb(48, 2, 2);
+    background-color: rgb(255, 255, 255);
+
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(233, 228, 228);
+    border-radius: 10;
+
+    transition: all 1s;
+
+}
+
+
+.menu-item-button:hover {
+    background-color: rgb(48, 2, 2);
+    
+}
+
+
+.menu-item-button:hover:disabled {
+    background-color: brown;
+}
+.menu-item-button:disabled {
+    filter: grayscale(1);
+    cursor:default;
+}
+
+
+.menu-item h2 {
+    height: auto;
+    width: 100%
+    
+}
+
+
+.menu-item img {
+    height: auto;
+    width: 100%
+
+}
+
+
+
+
+
+.item-display h2 {
+    height: auto;
+    width: 100%
+    
+}
+
+
+.item-display img {
+    height: auto;
+    width: 50%
+
+}
+
+.item-display .description {
+    height: auto;
+    width: 100%;
+    text-align: center;
+    font-size: xx-large;
+    max-width: 80%;
+
+}
+
+
+
+
+#menu-item-list button {
+
+
+    background-image: url('assets/ombre-bg-affect.svg');
+    background-repeat: repeat-x;
+    background-size:  auto 100%;
+    color: inherit;
+    cursor: pointer;
+    outline: none; 
+    appearance: none;
+    box-shadow: none;
+
+    color:yellow;
+    background-color: brown;
+
+    border-style: solid;
+    border-width: 0px;
+    border-color: rgb(48, 2, 2);
+    border-radius: 10;
+
+    transition: all 1s;
+
+}
+
+
+
+#menu-item-list .button:hover {
+    background-color: rgb(48, 2, 2);
+    scale: 1.05;
+    
+}
+
+
+#menu-item-list .button:hover:disabled {
+    background-color: brown;
+}
+#menu-item-list .button:disabled {
+    filter: grayscale(1);
+    cursor:default;
+}
+
+.item-display .button {
+    padding: 1em;
+
+    background-size:  auto 250% !important;
+    background-position: top;
+}
+
+.pizza-menu-back-button {
+    margin:20px;
+    background-image: url('assets/pizza_back.svg') !important;
+    background-color: rgba(240, 248, 255, 0) !important;
+    background-size: 10% 10%;
+    height: 10%;
+    width: 10%;
+    top: 0px;
+    background-repeat: no-repeat !important;
+    min-width: fit-content;
+    min-height: fit-content;
+    padding-left:20px;
+}
+
+
+.item-display .item-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
