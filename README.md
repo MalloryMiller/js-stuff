@@ -33,7 +33,7 @@ This is a general javascript sandbox repository, mostly of stuff for Megapuzzle 
 
 
 ## Parsec Pizza
-[Link](https://mallorymiller.github.io/js-stuff/pizza/pizza.html)
+[Link](https://mallorymiller.github.io/js-stuff/pizza/pizza.html), puzzle content by [Calvin J.](https://github.com/HalflingHelper)
 | Category    |  Status | 
 | ----------- | :-----: |
 | Javascript  | Done    |
