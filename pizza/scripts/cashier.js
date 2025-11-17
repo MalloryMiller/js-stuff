@@ -10,10 +10,10 @@ function cashier_speak() {
         {"speaker": "Cashier", pose: "thinking",  "text": "Anyway, uh... This will probably take at least all day to fix, right?"},  
         [{choice: "No, this shouldn't take long.", onclick: "changeText(4)"},{choice: "Yeah, it probably will take all day.", onclick: "changeText(1)"}],
         
-        {"speaker": "Cashier", pose: "reading", "text": "Wow, you really think so!?"}, 
+        {"speaker": "Cashier", pose: "reading", "text": "Really? You do think it'll be all day?"}, 
         {"speaker": "Cashier", "text": "Haha. Nice."}, 
         {"speaker": "Cashier", pose: "thinking", "text": "Ahem, uh, I mean you've got this. Take your time.", onclick: "changeText(2)"}, 
-        {"speaker": "Cashier", "text": "<span style='font-style: italic; opacity:.5'>Sigh...</span> Oh well. I'll just savor the time I have left."}, 
+        {"speaker": "Cashier", "text": "<span style='font-style: italic; opacity:.5'>Sigh...</span> Oh well. I'll just savor what free time I have left."}, 
         {"speaker": "Cashier", "text": "We hope you had a Positively Perfect purchase at Parsec Pizza."}, 
     ])
 }
