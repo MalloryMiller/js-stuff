@@ -30,3 +30,23 @@ This is a general javascript sandbox repository, mostly of stuff for Megapuzzle 
 | Page Layout | TODO    |
 | Assets      | In Progress |
 | Overall     | In Progress |
+
+
+## Parsec Pizza
+[Link](https://mallorymiller.github.io/js-stuff/pizza/pizza.html)
+| Category    |  Status | 
+| ----------- | :-----: |
+| Javascript  | Done    |
+| Page Layout | TODO    |
+| Assets      | Done    |
+| Overall     | In Progress |
+
+
+## KenKen
+[Link](https://mallorymiller.github.io/js-stuff/kenken/KenKen.html)
+| Category    |  Status | 
+| ----------- | :-----: |
+| Javascript  | Done    |
+| Page Layout | Done    |
+| Assets      | Done    |
+| Overall     | Done |

@@ -1,4 +1,8 @@
 
+body {
+
+    background-color: #492132FF;
+}
 #view {
     width: 100vw;
     height: 100vh;
@@ -8,23 +12,71 @@
 
 .pizza-bg {
     background-repeat: no-repeat;
-    background-color: rgb(27, 22, 22);
-    background-image: url('assets/KenKenBG.svg');
-    background-size: auto 90vh;
+    background-image: url('assets/pizza_bg.svg');
+    background-size: auto 100vh;
     min-height: 100vh;
     width: 100%;
     height: 100%;
-    background-position: right top;
+    background-position: left bottom;
 
     display: flex;
     flex-wrap: wrap;
     flex-direction: row-reverse;
     align-items: center;
     
-    justify-content: space-evenly;
+    justify-content:  center;
 
 
 }
+
+
+.cashier-bounderies {
+    width: 55vh;
+}
+
+#cashier {
+    background-position: right;
+    height:100vh;
+    width: 120vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('assets/Cashier_interactable.svg');
+
+    transform: translate(-50%,0);
+
+}
+
+
+.pizza-border {
+    border-image-source: url('assets/pizza_border.svg');
+    border-image-slice: 122 125 125 129;
+    border-image-width: 40px 40px 40px 40px;
+    padding: 40px 40px 40px 40px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch;
+    border-width: 30px;
+
+    background-repeat: no-repeat;
+    background-color: rgb(224, 224, 211);
+    background-repeat: repeat-x;
+    background-size: 100% auto;
+
+    height:85vh;
+    width: 45%;
+    min-width:600px;
+    max-width: calc(100vw - 80px);
+    aspect-ratio: 0.96/1;
+    display: flex;
+    justify-content: center;
+    justify-self: center !important;
+
+    overflow: hidden;
+    flex-wrap: wrap;
+    
+
+}
+
+
 
 
 #pizza-mini-navbar {
@@ -67,45 +119,6 @@
     width: 100%;
     text-align: center;
 }
-
-#casheir {
-    min-width: 300px;
-    height:90vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url('assets/Cashier_interactable.svg');
-
-    aspect-ratio: 1/1.5;
-
-}
-
-
-.pizza-border {
-    border-image-source: url('assets/pizza_border.svg');
-    border-image-slice: 122 125 125 129;
-    border-image-width: 40px 40px 40px 40px;
-    padding: 40px 40px 40px 40px;
-    border-image-outset: 0px 0px 0px 0px;
-    border-image-repeat: stretch stretch;
-    border-width: 30px;
-
-    background-repeat: no-repeat;
-    background-color: rgb(224, 224, 211);
-    background-repeat: repeat-x;
-    background-size: 100% auto;
-
-    height:90vh;
-    max-width: calc(100vw - 80px);
-    aspect-ratio: 0.96/1;
-    display: flex;
-    justify-content: center;
-
-    overflow: hidden;
-    flex-wrap: wrap;
-    
-
-}
-
 
 
 
@@ -243,7 +256,8 @@
 }
 
 .pizza-menu-back-button {
-    margin:20px;
+    margin-left:20px;
+    margin-top:20px;
     background-image: url('assets/pizza_back.svg') !important;
     background-color: rgba(240, 248, 255, 0) !important;
     background-size: 10% 10%;
