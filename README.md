@@ -37,9 +37,9 @@ This is a general javascript sandbox repository, mostly of stuff for Megapuzzle 
 | Category    |  Status | 
 | ----------- | :-----: |
 | Javascript  | Done    |
-| Page Layout | TODO    |
+| Page Layout | Done    |
 | Assets      | Done    |
-| Overall     | In Progress |
+| Overall     | Done    |
 
 
 ## KenKen
@@ -47,6 +47,6 @@ This is a general javascript sandbox repository, mostly of stuff for Megapuzzle 
 | Category    |  Status | 
 | ----------- | :-----: |
 | Javascript  | Done    |
-| Page Layout | Done    |
+| Page Layout | In Progres    |
 | Assets      | Done    |
-| Overall     | Done |
+| Overall     | In Progress |
