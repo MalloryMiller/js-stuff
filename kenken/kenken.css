@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right bottom;
-    background-color: #0f0101;
+    background-color: #120100;
 }
 
 #view {
@@ -17,53 +17,57 @@
     background-repeat: no-repeat;
     background-image: url('assets/KenKenBG.svg');
     background-size: auto 100vh;
+    background-position: right bottom;
     min-height: 100vh;
-    width: 100vw;
-    background-position: right top;
+    width: 95vw;
     display: flex;
     min-width: fit-content;
-    flex-wrap:wrap-reverse;
-    justify-content: space-evenly;
+    flex-wrap:wrap;
+    justify-content: space-around;
 
 }
 
 
 #agent {
     min-width: 300px;
-    height:100vh;
+    height:90vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url('assets/KenKendemo.svg');
 
     aspect-ratio: 1/1.57;
+    align-self: flex-end;
 
 }
 
-
-.kenken-border {
-    background-repeat: no-repeat;
-    background-image: url('assets/KenKenWindow.svg');
-    background-size: cover;
-    height:95vh;
-    aspect-ratio: 0.96/1;
-    display: flex;
-    justify-content: center;
-
-
-
-
-
-}
 
 .display {
+    border-image-source: url('assets/KenKenWindow2.svg');
+    border-image-slice: 167 42 160 310;
+    border-image-width: 15vh 6vh 15vh 30vh;
+    padding: 15vh 6vh 15vh 30vh;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch;
+    margin-right: calc(30vh - 6vh);
+
+    max-width: 100vh;
+    width: 60vh;
+
+    background-color: black;
+    background-clip: content-box;
+
     color:wheat;
-    background-color: rgba(87, 19, 19, 0);
-    aspect-ratio: 1/1;
     align-self: center;
-    margin-left:20%;
-    margin-right:20%;
-    margin-top: -4%;
-    margin-bottom: 15%;
+    margin-top: 2vh;
+    
+    height:60vh;
     
 
 }
+
+
+
+.interactable-item::after {
+    transform: translate(40vh, 70vh);
+}
+

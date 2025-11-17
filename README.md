@@ -42,11 +42,11 @@ This is a general javascript sandbox repository, mostly of stuff for Megapuzzle 
 | Overall     | Done    |
 
 
-## KenKen
+## VennKen
 [Link](https://mallorymiller.github.io/js-stuff/kenken/KenKen.html)
 | Category    |  Status | 
 | ----------- | :-----: |
 | Javascript  | Done    |
-| Page Layout | In Progres    |
+| Page Layout | Done    |
 | Assets      | Done    |
-| Overall     | In Progress |
+| Overall     | Done    |

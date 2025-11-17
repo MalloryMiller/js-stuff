@@ -35,7 +35,7 @@ function ozie() {
         {"speaker": "O2I3", "text": "Again! Again!"} , 
         [{choice: "Any progress on the ship's puzzle?", onclick: "changeText(1)"},{choice: "Again?!?", onclick: "changeText(-1)"}],
         {"speaker": "O2I3", "text": "Yeah I know it! You want it?"} , 
-        {"speaker": "O2I3", "text": "Aww but where's the fun if you don't solve it yourself! Hmm..."} , 
+        {"speaker": "O2I3", "text": "Aww but where's the fun if you don't get to fetch it yourself! Hmm..."} , 
         {"speaker": "O2I3", "text": "Oh! Oh! Here: <span class='hint-emphasis'>The fourth letter can be found by looking at the second half of the first!</span>"} , 
         {"speaker": "O2I3", "text": "Hope that helps, friend! Again, Again!"} , 
         [{choice: "Again!", onclick: "level_up()"}],

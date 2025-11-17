@@ -114,6 +114,7 @@
     background-size:contain;
     position:absolute;
     bottom:0px;
+    left:80px;
     background-position: center;
     background-position: top;
     background-size: 90%;
@@ -128,14 +129,14 @@
     background-image: url("assets/manual.png");
     height: 8vh;
     width: 30vh;
-    font-size: 5vh;
+    font-size: 3vh;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(95, 255, 47);
     background-repeat: no-repeat;
     background-position: center;
     background-size:contain;
     text-align: center;
-    padding-top: 3vh;
+    padding-top: 3.7vh;
     margin-top: 3vh;
     cursor: pointer;
     filter: brightness(.4);
@@ -150,5 +151,12 @@
     transition: filter .5s ease-in;
     filter: brightness(1.75);
 
+}
+
+
+
+.interactable-item::after {
+    transform: translate(-450vh, -150vh);
+    
 }
 

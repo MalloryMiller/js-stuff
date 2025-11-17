@@ -20,3 +20,11 @@ body ::selection {
     font-weight: bold;
     color:rgb(253, 76, 76)
 }
+
+
+.interactable-item::after {
+    content: url('animated_notif.webp');
+    zoom: calc(0.1);
+    position: absolute;
+    
+}

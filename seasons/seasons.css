@@ -225,3 +225,9 @@
     text-shadow: rgb(255, 98, 59) 1px 0 50px;
 
 }
+
+
+.interactable-item::after {
+    transform: translate(2000px, 2000px);
+}
+
