@@ -41,7 +41,8 @@
     display: flex;
     align-items: center;
     max-width: 20vw;
-    flex-flow: column;
+    flex-flow: row;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -50,7 +51,6 @@
 #pigrim-findings div {
     background-color: #6ABEB8;
     padding:20px;
-    margin:10px;
     font-size: 3vh;
     border-image-source: url('assets/hiking_border.svg');
     border-image-slice: 500 500 500 500;
@@ -58,6 +58,10 @@
     background-clip: content-box;
 }
 
+#pigrim-findings h1 {
+    font-size: 4vh;
+    text-align: center;
+}
 
 
 .interactable-item::after {

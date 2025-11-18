@@ -26,5 +26,6 @@ body ::selection {
     content: url('animated_notif.webp');
     zoom: calc(0.1);
     position: absolute;
+    pointer-events: none
     
 }
