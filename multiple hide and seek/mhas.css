@@ -1,0 +1,41 @@
+
+.interactable-item::after {
+    transform: translate(-150vh, -1000vh);
+}
+
+
+.view {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    bottom: 0px;
+    background-color: #140d3f;
+
+    background-repeat: no-repeat;
+    background-image: url('assets/hiking_bg.svg');
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.pilgrim-bg {
+    height: 100vh;
+
+
+    display: flex;
+    align-items:last baseline;
+    justify-content:  center;
+    flex-flow: row-reverse;
+}
+
+
+#pilgrim {
+    background-position: right;
+    height:90vh;
+    width:90vh;
+    bottom: 0px;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('assets/hiker_interactable.svg');
+
+}

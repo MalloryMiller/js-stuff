@@ -345,6 +345,10 @@ ANIMATIONS
     
 }
 
+.interactable {
+    cursor: pointer;
+}
+
 .interactable :hover {
     animation: highlight-loop 2s ease-in-out infinite !important;
 }

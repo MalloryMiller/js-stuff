@@ -50,3 +50,12 @@ This is a general javascript sandbox repository, mostly of stuff for Megapuzzle 
 | Page Layout | Done    |
 | Assets      | Done    |
 | Overall     | Done    |
+
+## Multiple Hide and Seek
+[Link](https://mallorymiller.github.io/js-stuff/multiple%20hide%20and%20seek/mhas.html)
+| Category    |  Status | 
+| ----------- | :-----: |
+| Javascript  | TODO    |
+| Page Layout | Done    |
+| Assets      | Done    |
+| Overall     | In Progress    |

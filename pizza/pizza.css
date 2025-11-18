@@ -1,8 +1,11 @@
 
 body {
 
-    background-color: #492132FF;
+    background-color: #411e36;
+    overflow-x: hidden;
 }
+
+
 #view {
     width: 100vw;
     height: 100vh;
