@@ -1,9 +1,4 @@
 
-.interactable-item::after {
-    transform: translate(-150vh, -1000vh);
-}
-
-
 .view {
     width: 100vw;
     height: 100vh;
@@ -39,3 +34,10 @@
     background-image: url('assets/hiker_interactable.svg');
 
 }
+
+
+.interactable-item::after {
+    transform: translate(0px,0px);
+    filter:hue-rotate(50deg) brightness(180%);
+}
+

@@ -157,6 +157,7 @@
 
 .interactable-item::after {
     transform: translate(-450vh, -150vh);
+    filter: hue-rotate(70deg);
     
 }
 

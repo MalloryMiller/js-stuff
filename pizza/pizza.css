@@ -282,6 +282,7 @@ body {
 
 
 .interactable-item::after {
-    transform: translate(-150vh, -1000vh);
+    transform: translate(-100vh, -900vh);
+    filter: hue-rotate(-10deg) brightness(200%) saturate(160%);
 }
 

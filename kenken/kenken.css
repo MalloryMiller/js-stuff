@@ -69,5 +69,6 @@
 
 .interactable-item::after {
     transform: translate(40vh, 70vh);
+    filter: hue-rotate(20deg) brightness(200%);
 }
 
