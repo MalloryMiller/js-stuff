@@ -270,7 +270,7 @@ body {
     background-repeat: no-repeat !important;
     min-width: fit-content;
     min-height: fit-content;
-    padding-left:20px;
+    padding-left: 20px;
 }
 
 
@@ -282,7 +282,7 @@ body {
 
 
 .interactable-item::after {
-    transform: translate(-100vh, -900vh);
-    filter: hue-rotate(-10deg) brightness(200%) saturate(160%);
+    transform: translate(-100vh, -1000vh);
+    filter: hue-rotate(-10deg) brightness(150%);
 }
 

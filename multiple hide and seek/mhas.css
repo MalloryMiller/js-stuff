@@ -17,7 +17,7 @@
 
 
     display: flex;
-    align-items:last baseline;
+    align-items:flex-end;
     justify-content:  center;
     flex-flow: row-reverse;
 }
@@ -36,8 +36,31 @@
 }
 
 
-.interactable-item::after {
-    transform: translate(0px,0px);
-    filter:hue-rotate(50deg) brightness(180%);
+#pigrim-findings {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    max-width: 20vw;
+    flex-flow: column;
+    justify-content: center;
 }
 
+
+
+#pigrim-findings div {
+    background-color: #6ABEB8;
+    padding:20px;
+    margin:10px;
+    font-size: 3vh;
+    border-image-source: url('assets/hiking_border.svg');
+    border-image-slice: 500 500 500 500;
+    border-image-width: 30px 30px 30px 30px;
+    background-clip: content-box;
+}
+
+
+
+.interactable-item::after {
+    transform: translate(0px,0px);
+    filter:hue-rotate(40deg) brightness(180%);
+}
