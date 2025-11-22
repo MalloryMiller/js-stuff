@@ -29,13 +29,11 @@
 
 
 #agent {
-    min-width: 300px;
+    min-width: 58vh;
     height:90vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url('assets/KenKendemo.svg');
-
-    aspect-ratio: 1/1.57;
     align-self: flex-end;
 
 }
@@ -48,9 +46,9 @@
     padding: 15vh 6vh 15vh 30vh;
     border-image-outset: 0px 0px 0px 0px;
     border-image-repeat: stretch stretch;
-    margin-right: calc(30vh - 6vh);
+    margin-right: calc(15vh - 6vh);
 
-    max-width: 100vh;
+    max-width: 80vh;
     width: 60vh;
 
     background-color: black;

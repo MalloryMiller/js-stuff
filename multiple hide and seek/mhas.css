@@ -39,17 +39,17 @@
 #pigrim-findings {
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items:center;
     max-width: 20vw;
     flex-flow: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content:center;
 }
-
-
 
 #pigrim-findings div {
     background-color: #6ABEB8;
+    mix-blend-mode:hard-light;
+    filter: brightness(1.2);
     padding:20px;
     font-size: 3vh;
     border-image-source: url('assets/hiking_border.svg');
