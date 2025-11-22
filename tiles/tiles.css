@@ -1,0 +1,44 @@
+
+
+.tile {
+    width: 10vw;
+    aspect-ratio: 1/1;
+    background-size: cover;
+    text-align: center;
+    font-size: 9.5vh;
+    font-weight: bold;
+}
+
+
+.green {
+    background-image: url('assets/green.svg');
+}
+.orange {
+    background-image: url('assets/orange.svg');
+    color:rgb(255, 255, 255)
+}
+.blue {
+    background-image: url('assets/blue.svg');
+    color:aliceblue
+}
+.red {
+    background-image: url('assets/red.svg');
+    color:aliceblue
+}
+.yellow {
+    background-image: url('assets/yellow.svg');
+}
+.purple {
+    background-image: url('assets/purple.svg');
+    color:aliceblue
+}
+.white {
+    background-image: url('assets/white.svg');
+}
+
+
+.paper {
+    width:50vw;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
