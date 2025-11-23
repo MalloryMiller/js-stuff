@@ -237,14 +237,14 @@ body {
 
 
 #menu-item-list .button:hover {
-    background-color: rgb(48, 2, 2);
+    background-color: #300202;
     scale: 1.05;
     
 }
 
 
 #menu-item-list .button:hover:disabled {
-    background-color: brown;
+    background-color: #a52a2a;
 }
 #menu-item-list .button:disabled {
     filter: grayscale(1);

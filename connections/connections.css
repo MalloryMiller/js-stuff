@@ -1,0 +1,50 @@
+.projection {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+.tile {
+    width: 15vw;
+    height: 10vw;
+    color:wheat;
+    background-clip: content-box;
+    border-style:solid;
+    border-width: 3vw 3vw 3vw 3vw;
+
+    text-align: center;
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+.tile div {
+    font-weight: normal;
+    margin-bottom: 3vw;
+}
+
+.red {
+    border-image: url('assets/red_border.svg');
+    border-image-slice: 218 213 195 231;
+    background-color: #A52A2A;
+    
+}
+
+.yellow {
+    border-image: url('assets/yellow_border.svg');
+    border-image-slice: 218 213 195 231;
+    background-color: #352114;
+}
+
+.purple {
+    border-image: url('assets/purple_border.svg');
+    border-image-slice: 218 213 195 231;
+    background-color: #221559;
+}
+
+.blue {
+    border-image: url('assets/blue_border.svg');
+    border-image-slice: 218 213 195 231;
+    background-color: #26457F;
+}
+
+
