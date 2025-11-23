@@ -25,26 +25,26 @@
 .red {
     border-image: url('assets/red_border.svg');
     border-image-slice: 218 213 195 231;
-    background-color: #A52A2A;
+    background-color: #7F2217;
     
 }
 
 .yellow {
     border-image: url('assets/yellow_border.svg');
     border-image-slice: 218 213 195 231;
-    background-color: #352114;
+    background-color: #87600C;
 }
 
-.purple {
-    border-image: url('assets/purple_border.svg');
+.orange {
+    border-image: url('assets/orange_border.svg');
     border-image-slice: 218 213 195 231;
-    background-color: #221559;
+    background-color: #A55201;
 }
 
-.blue {
-    border-image: url('assets/blue_border.svg');
+.brown {
+    border-image: url('assets/brown_border.svg');
     border-image-slice: 218 213 195 231;
-    background-color: #26457F;
+    background-color: #582C0F;
 }
 
 
