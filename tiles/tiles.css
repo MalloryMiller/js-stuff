@@ -1,12 +1,35 @@
 
 
 .tile {
-    width: 10vw;
+    align-content: center;
+    width: 5vw;
     aspect-ratio: 1/1;
     background-size: cover;
     text-align: center;
-    font-size: 9.5vh;
+    font-size: 2vw;
     font-weight: bold;
+}
+
+.green-accent {
+    color: rgb(0, 255, 0);
+}
+.orange-accent {
+    color: rgb(255, 136, 0);
+}
+.blue-accent {
+    color: #74b0ff;
+}
+.red-accent {
+    color: rgb(255, 0, 0);
+}
+.yellow-accent {
+    color: rgb(255, 251, 0);
+}
+.purple-accent {
+    color: rgb(188, 72, 255);
+}
+.white-accent {
+    color: rgb(204, 204, 204);
 }
 
 
@@ -41,4 +64,36 @@
     width:50vw;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
+}
+
+
+#blob {
+
+    background-image: url('assets/blob-npc.svg');
+    width: 60vw;
+    aspect-ratio: 1/1;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+.blob-bg {
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-image: url('assets/blob_bg.svg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: right bottom;
+    padding: 5vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.interactable-item::after {
+    transform: translate(0vh, 0vh);
+    filter: hue-rotate(165deg) brightness(2.3);
+    
 }
