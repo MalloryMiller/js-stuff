@@ -14,8 +14,7 @@
 #venatia {
     min-width: 500px;
     width: 10vw;
-    height: 0%;
-    position: absolute;
+    height: 100px;
     top:0px
 }
 
