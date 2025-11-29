@@ -42,10 +42,10 @@ const poems = {
 const seasons = {
     0: "schmorplorp",
     1: "winter",
-    2: "spring",
+    5: "spring",
     3: "pollination",
     4: "fall",
-    5: "burning",
+    2: "burning",
     6: "ash",
 }
 

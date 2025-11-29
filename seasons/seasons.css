@@ -201,7 +201,7 @@
 }
 
 .spring #poem {
-    color:rgb(117, 238, 106);
+    color:#ffdef8;
 }
 
 .pollination #poem {
@@ -215,14 +215,14 @@
 
 
 .burning #poem {
-    color:rgb(255, 206, 206);
+    color:#ffffff;
     text-shadow: rgb(0, 0, 0) 1px 0 50px;
 
 }
 
 .ash #poem {
     color:rgb(255, 255, 255);
-    text-shadow: rgb(255, 98, 59) 1px 0 50px;
+    text-shadow: rgb(255, 255, 255) 1px 0 50px;
 
 }
 
